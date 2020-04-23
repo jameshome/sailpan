@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/reporters",
+      "handler": "reporter.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reporters/count",
+      "handler": "reporter.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reporters/:id",
+      "handler": "reporter.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/reporters",
+      "handler": "reporter.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/reporters/:id",
+      "handler": "reporter.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/reporters/:id",
+      "handler": "reporter.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

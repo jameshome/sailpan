@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reporters",
+  "info": {
+    "name": "Reporter"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "website_url": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "boat_report",
+        "marina_announcement",
+        "official_notice"
+      ]
+    },
+    "about": {
+      "type": "text"
+    },
+    "reports": {
+      "via": "reporters",
+      "collection": "report"
+    }
+  }
+}

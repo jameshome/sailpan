@@ -1,0 +1,27 @@
+{
+  "name": "sailpan",
+  "version": "0.1.0",
+  "scripts": {
+    "install-backend": "cd backend && yarn && yarn dev",
+    "install-frontend": "cd frontend && yarn && yarn dev",
+    "build": "yarn && npm-run-all -p build-*",
+    "build-backend": "cd backend && yarn build",
+    "build-frontend": "cd frontend && yarn build",
+    "dev": "yarn && npm-run-all -p dev-*",
+    "dev-backend": "cd backend && yarn dev",
+    "dev-frontend": "cd frontend && yarn dev",
+    "start": "yarn && npm-run-all -p start-*",
+    "start-backend": "cd backend && yarn start",
+    "start-frontend": "cd frontend && yarn start"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "author": {
+    "name": "James Home"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

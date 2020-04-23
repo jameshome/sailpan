@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "name": "Report"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "report_categories": {
+      "collection": "report-category",
+      "via": "reports",
+      "dominant": true
+    },
+    "locations": {
+      "collection": "location",
+      "via": "reports",
+      "dominant": true
+    },
+    "detail": {
+      "type": "richtext"
+    },
+    "reporters": {
+      "collection": "reporter",
+      "via": "reports",
+      "dominant": true
+    },
+    "reported_at": {
+      "type": "datetime"
+    },
+    "brief": {
+      "type": "text"
+    }
+  }
+}

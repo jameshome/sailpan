@@ -1,0 +1,22 @@
+import gql from "graphql-tag";
+
+const REPORTS_QUERY = gql`
+query Reports {
+  reports(sort: "reported_at:desc") {
+    id
+    brief
+    detail
+    reported_at
+    report_categories {
+      id
+      name
+    }
+    reporters {
+      name
+      type
+      website_url
+    }
+  }
+}
+`;
+export default REPORTS_QUERY;

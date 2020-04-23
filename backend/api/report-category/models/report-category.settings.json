@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_categories",
+  "info": {
+    "name": "Report Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "reports": {
+      "via": "report_categories",
+      "collection": "report"
+    }
+  }
+}

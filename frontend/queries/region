@@ -1,0 +1,11 @@
+import gql from "graphql-tag";
+
+const REGION_QUERY = gql`
+query Regions($id: ID!){
+  region(id: $id) {
+    id
+    name
+    }
+  }
+`;
+export default REGION_QUERY;

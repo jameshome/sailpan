@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "name": "location"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "marina",
+        "anchorage",
+        "channel",
+        "harbor",
+        "town"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "uncertain",
+        "closed",
+        "unknown"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "website": {
+      "type": "string"
+    },
+    "reports": {
+      "via": "locations",
+      "collection": "report"
+    },
+    "geometry": {
+      "type": "json"
+    },
+    "regions": {
+      "collection": "region",
+      "via": "locations",
+      "dominant": true
+    }
+  }
+}
