@@ -34,6 +34,7 @@ const Report = ({ report }) => {
           }
           p {
             margin: 12px;
+            line-height: 2em;
           }
         `}
       </style>

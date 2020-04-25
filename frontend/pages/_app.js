@@ -11,7 +11,12 @@ const App = ({ Component, pageProps, apollo }) => {
         <title>SAILPAN</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css"
+          rel="stylesheet"
+        />
       </Head>
+
       <div>
         <Component {...pageProps} />
       </div>
@@ -56,8 +61,7 @@ const App = ({ Component, pageProps, apollo }) => {
           }
 
           html {
-            overflow-x: hidden;
-            overflow-y: scroll;
+            overflow: hidden;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             -webkit-text-size-adjust: 100%;
             overscroll-behavior: none;
@@ -65,7 +69,7 @@ const App = ({ Component, pageProps, apollo }) => {
           }
 
           body {
-            overflow-x: hidden;
+            overflow: hidden;
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
