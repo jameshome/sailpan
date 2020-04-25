@@ -7,4 +7,7 @@ module.exports = {
     DATA_URL: process.env.DATA_URL,
     MAPBOX_API_KEY: process.env.MAPBOX_API_KEY,
   },
+  devIndicators: {
+    autoPrerender: false,
+  },
 };

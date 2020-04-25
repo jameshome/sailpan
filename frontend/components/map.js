@@ -1,25 +1,67 @@
+import * as React from "react";
 import { Component } from "react";
-import ReactMapGL from "react-map-gl";
+import { render } from "react-dom";
+import MapGL, {
+  Popup,
+  NavigationControl,
+  FullscreenControl,
+  ScaleControl,
+} from "react-map-gl";
+
+const navigationStyle = {
+  position: "absolute",
+  top: 36,
+  right: 0,
+  padding: "10px",
+  opacity: 0.5,
+};
+
+const fullscreenStyle = {
+  position: "absolute",
+  top: 0,
+  right: 0,
+  padding: "10px",
+  opacity: 0.5,
+};
+
+const scaleStyle = {
+  position: "absolute",
+  bottom: 28,
+  left: 0,
+  padding: "6px",
+  opacity: 0.75,
+};
 
 class Map extends Component {
   state = {
     viewport: {
       width: "100%",
       height: "100%",
-      latitude: 41.5868,
-      longitude: -93.625,
-      zoom: 13,
+      latitude: 24.75,
+      longitude: -109.7,
+      zoom: 5,
     },
   };
 
   render() {
     return (
-      <ReactMapGL
+      <MapGL
         mapStyle="mapbox://styles/jameshome/ck9cf3tsd02al1imu0usk65qh"
-        mapboxApiAccessToken="pk.eyJ1IjoiamFtZXNob21lIiwiYSI6ImNrOTY2MWNwOTBlcWkzZW1nb3hjM2s3Z2IifQ.uLWAYFABCynG5ONB0zzehw"
+        mapOptions={{ logoPosition: "bottom-left" }}
+        mapboxApiAccessToken={process.env.MAPBOX_API_KEY}
         onViewportChange={(viewport) => this.setState({ viewport })}
         {...this.state.viewport}
-      />
+      >
+        <div style={scaleStyle}>
+          <ScaleControl unit="nautical" />
+        </div>
+        <div style={navigationStyle}>
+          <NavigationControl />
+        </div>
+        <div style={fullscreenStyle}>
+          <FullscreenControl />
+        </div>
+      </MapGL>
     );
   }
 }

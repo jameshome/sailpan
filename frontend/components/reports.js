@@ -37,9 +37,6 @@ const Reports = ({ reports }) => {
 
       <style jsx>
         {`
-          div {
-          }
-
           p {
             margin: 12px;
           }
