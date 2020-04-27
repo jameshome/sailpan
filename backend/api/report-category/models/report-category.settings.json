@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "report_categories",
   "info": {
-    "name": "Report Category"
+    "name": "Conditions"
   },
   "options": {
     "increments": true,
@@ -16,8 +16,8 @@
       "type": "text"
     },
     "reports": {
-      "via": "report_categories",
-      "collection": "report"
+      "collection": "report",
+      "via": "conditions"
     }
   }
 }

@@ -10,7 +10,7 @@ const App = ({ Component, pageProps, apollo }) => {
       <Head>
         <title>SAILPAN</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <link
           href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css"
           rel="stylesheet"
@@ -27,8 +27,8 @@ const App = ({ Component, pageProps, apollo }) => {
             font-style: normal;
             font-weight: 400;
             src: local("Overpass Regular"), local("Overpass-Regular"),
-              url("../fonts/overpass-v4-latin-regular.woff2") format("woff2"),
-              url("../fonts/overpass-v4-latin-regular.woff") format("woff");
+              url("../fnt/overpass-v4-latin-regular.woff2") format("woff2"),
+              url("../fnt/overpass-v4-latin-regular.woff") format("woff");
           }
 
           @font-face {
@@ -36,8 +36,8 @@ const App = ({ Component, pageProps, apollo }) => {
             font-style: italic;
             font-weight: 400;
             src: local("Overpass Italic"), local("Overpass-Italic"),
-              url("../fonts/overpass-v4-latin-italic.woff2") format("woff2"),
-              url("../fonts/overpass-v4-latin-italic.woff") format("woff");
+              url("../fnt/overpass-v4-latin-italic.woff2") format("woff2"),
+              url("../fnt/overpass-v4-latin-italic.woff") format("woff");
           }
 
           @font-face {
@@ -45,8 +45,8 @@ const App = ({ Component, pageProps, apollo }) => {
             font-style: normal;
             font-weight: 600;
             src: local("Overpass SemiBold"), local("Overpass-SemiBold"),
-              url("../fonts/overpass-v4-latin-600.woff2") format("woff2"),
-              url("../fonts/overpass-v4-latin-600.woff") format("woff");
+              url("../fnt/overpass-v4-latin-600.woff2") format("woff2"),
+              url("../fnt/overpass-v4-latin-600.woff") format("woff");
           }
 
           @font-face {
@@ -54,10 +54,9 @@ const App = ({ Component, pageProps, apollo }) => {
             font-style: normal;
             font-weight: 400;
             src: local("Racing Sans One"), local("RacingSansOne-Regular"),
-              url("../fonts/racing-sans-one-v7-latin-regular.woff2")
+              url("../fnt/racing-sans-one-v7-latin-regular.woff2")
                 format("woff2"),
-              url("../fonts/racing-sans-one-v7-latin-regular.woff")
-                format("woff");
+              url("../fnt/racing-sans-one-v7-latin-regular.woff") format("woff");
           }
 
           html {
@@ -74,7 +73,7 @@ const App = ({ Component, pageProps, apollo }) => {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             -moz-font-feature-settings: "liga" on;
-            font: 400 16px/21px Overpass, sans-serif;
+            font: 400 16px/1.4 Overpass, sans-serif;
             background-color: ${color.cream};
             color: ${color.blue};
             letter-spacing: 0;
@@ -83,7 +82,6 @@ const App = ({ Component, pageProps, apollo }) => {
 
           a {
             color: ${color.orange};
-            font-weight: 600;
             text-decoration: none;
             border-bottom: 1px solid transparent;
           }
@@ -113,8 +111,34 @@ const App = ({ Component, pageProps, apollo }) => {
             opacity: 100%;
           }
 
+          h1 {
+            font: 400 2.6em/0.8 "Racing Sans One", sans-serif;
+            text-transform: uppercase;
+          }
+
+          h2 {
+            font: 400 1.2em/0.8 "Racing Sans One", sans-serif;
+            text-transform: uppercase;
+          }
+
+          h3 {
+            font: 400 italic 1em/1.4 Overpass, sans-serif;
+          }
+
+          h4 {
+            font: 400 0.9em/1.4 Overpass, sans-serif;
+          }
+
+          h5 {
+            font: 300 1.3em/1.4 Overpass, sans-serif;
+          }
+
           strong {
             font-weight: 600;
+          }
+
+          em {
+            font-style: italic;
           }
         `}
       </style>

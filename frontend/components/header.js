@@ -1,37 +1,31 @@
 import React from "react";
-import Cases from "../components/cases";
+import Stats from "../components/stats";
 
-const Header = ({ regionName }) => {
+const Header = ({ region }) => {
   return (
     <div>
       <h3>
         pandemic-related port and passage information for liveaboard sailors
       </h3>
       <h1>Sailing Through the Pandemic</h1>
-      <h4>COVERAGE AREA — {regionName}</h4>
-      <Cases />
+      <h4>COVERAGE AREA — {region.name}</h4>
+      <Stats region={region} />
       <style jsx>
         {`
           div {
             width: 100%;
-            max-width: 770px;
-            margin: 0 auto 6px;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            padding: 0 0 24px 0;
           }
 
           h1,
           h3,
           h4 {
+            width: 100%;
+            max-width: 770px;
             text-align: center;
-            margin: 12px;
-          }
-
-          h1 {
-            font: 400 2.8em/0.8em "Racing Sans One", sans-serif;
-            text-transform: uppercase;
-          }
-
-          h3 {
-            font: 400 italic 1.2em/1.4em Overpass, sans-serif;
+            margin: 6px auto;
           }
         `}
       </style>

@@ -9,9 +9,9 @@
     "timestamps": true
   },
   "attributes": {
-    "report_categories": {
-      "collection": "report-category",
+    "conditions": {
       "via": "reports",
+      "collection": "report-category",
       "dominant": true
     },
     "locations": {
@@ -32,6 +32,14 @@
     },
     "brief": {
       "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "boat_report",
+        "marina_announcement",
+        "official_notice"
+      ]
     }
   }
 }

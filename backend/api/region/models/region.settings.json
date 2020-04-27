@@ -19,8 +19,12 @@
       "type": "float"
     },
     "locations": {
-      "via": "regions",
-      "collection": "location"
+      "collection": "location",
+      "via": "regions"
+    },
+    "stats": {
+      "collection": "region-stat",
+      "via": "region"
     }
   }
 }

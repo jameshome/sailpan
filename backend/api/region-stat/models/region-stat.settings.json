@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "reporters",
+  "collectionName": "region_stats",
   "info": {
-    "name": "Reporter"
+    "name": "Stat"
   },
   "options": {
     "increments": true,
@@ -12,15 +12,18 @@
     "name": {
       "type": "string"
     },
+    "deaths": {
+      "type": "string"
+    },
+    "cases": {
+      "type": "string"
+    },
     "url": {
       "type": "string"
     },
-    "about": {
-      "type": "text"
-    },
-    "reports": {
-      "via": "reporters",
-      "collection": "report"
+    "region": {
+      "via": "stats",
+      "model": "region"
     }
   }
 }

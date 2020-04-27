@@ -45,8 +45,8 @@
       "type": "json"
     },
     "regions": {
-      "collection": "region",
       "via": "locations",
+      "collection": "region",
       "dominant": true
     }
   }

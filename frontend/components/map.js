@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Component } from "react";
 import { render } from "react-dom";
+
 import MapGL, {
   Popup,
   NavigationControl,
@@ -26,9 +27,9 @@ const fullscreenStyle = {
 
 const scaleStyle = {
   position: "absolute",
-  bottom: 28,
+  top: 24,
   left: 0,
-  padding: "6px",
+  padding: "10px",
   opacity: 0.75,
 };
 

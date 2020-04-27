@@ -3,6 +3,7 @@ import Dynamic from "next/dynamic";
 import Query from "../components/query";
 import Header from "../components/header";
 import Reports from "../components/reports";
+import color from "../utils/style";
 
 import REGION_QUERY from "../queries/region";
 import REPORTS_QUERY from "../queries/reports";
@@ -21,7 +22,7 @@ const Home = () => {
               <title>SAILPAN — {region.name}</title>
             </Head>
             <header>
-              <Header regionName={region.name} />
+              <Header region={region} />
             </header>
             <main>
               <section>
@@ -31,7 +32,7 @@ const Home = () => {
                   }}
                 </Query>
               </section>
-              <section>
+              <section className="map">
                 <Map />
               </section>
             </main>
@@ -57,6 +58,10 @@ const Home = () => {
               section {
                 flex: 1;
                 overflow-y: auto;
+              }
+
+              .map {
+                background-color: ${color.blue08};
               }
             `}</style>
           </div>

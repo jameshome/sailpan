@@ -8,10 +8,10 @@ const Reports = ({ reports }) => {
   return (
     <div>
       <p>
-        These are uncertain times. Reports are sourced with care, but policies
-        change and enforcement is variable. Use this information at your own
-        risk, expect the unexpected, and above all, respect the locals.{" "}
-        <a href="/how">How Sailpan works</a>
+        These are uncertain times. SailPan reports are sourced with care, but
+        policies change and enforcement is variable. Use this information at
+        your own risk, expect the unexpected, and above all, respect the locals.{" "}
+        <a href="/how">How SailPan works</a>
       </p>
       <nav>
         <ul>
@@ -34,11 +34,15 @@ const Reports = ({ reports }) => {
         previousDate = date;
         return <Report report={report} key={`report__${report.id}`} />;
       })}
-
       <style jsx>
         {`
+          div {
+            margin: 42px 24px 48px;
+          }
+
           p {
-            margin: 12px;
+            margin: 6px 0;
+            font-size: 0.875rem;
           }
 
           ul {
@@ -60,8 +64,12 @@ const Reports = ({ reports }) => {
           }
 
           nav {
-            margin: 12px;
-            border-bottom: 1px solid ${color.blue50};
+            margin: 6px 0;
+          }
+
+          img {
+            display: block;
+            margin: 48px auto;
           }
         `}
       </style>

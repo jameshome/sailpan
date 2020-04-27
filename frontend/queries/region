@@ -5,7 +5,14 @@ query Regions($id: ID!){
   region(id: $id) {
     id
     name
+    stats {
+      id
+      name
+      url
+      cases
+      deaths
     }
   }
+}
 `;
 export default REGION_QUERY;
