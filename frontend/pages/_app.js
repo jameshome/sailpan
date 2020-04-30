@@ -92,23 +92,27 @@ const App = ({ Component, pageProps, apollo }) => {
           }
 
           a.primary {
-            font-family: "Racing Sans One";
+            font-family: "Overpass";
             font-style: normal;
-            font-weight: 400;
-            font-size: 1rem;
+            font-weight: 600;
+            font-size: 0.75rem;
             line-height: 1rem;
             border-radius: 1rem;
             height: 1rem;
-            padding: 0 12px;
+            padding: 4px 8px;
             color: ${color.cream};
             background-color: ${color.orange};
             text-transform: uppercase;
             text-decoration: none;
             white-space: nowrap;
-            opacity: 90%;
+            opacity: 100%;
           }
 
           a.primary:hover {
+            opacity: 90%;
+          }
+
+          a.primary:active {
             opacity: 100%;
           }
 

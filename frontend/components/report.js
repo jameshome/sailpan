@@ -61,9 +61,9 @@ const Report = ({ report }) => {
           article {
             position: relative;
             font-size: 0.875rem;
-            margin: 18px 0;
-            padding-left: 48px;
-            background: url(../img/icon-report-boatreport.png) top left / 36px
+            margin: 18px 18px 18px 0;
+            padding-left: 60px;
+            background: url(../img/icon-report-boatreport.png) 12px 0px / 36px
               no-repeat;
           }
 
@@ -80,7 +80,7 @@ const Report = ({ report }) => {
           h2 {
             margin: 0;
             padding-top: 12px;
-            border-top: 1px solid ${color.blue50};
+            border-top: 1px solid ${color.blue25};
             text-align: center;
           }
 
@@ -108,7 +108,7 @@ const Report = ({ report }) => {
             content: ", ";
           }
 
-          em:last-of-type::after {
+          em:last-child::after {
             content: "";
           }
 

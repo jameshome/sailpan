@@ -4,7 +4,7 @@ import Head from "next/head";
 import Query from "../components/query";
 import Header from "../components/header";
 import Reports from "../components/reports";
-import Location from "../components/location";
+import Feature from "../components/feature";
 import color from "../utils/style";
 import MapGL, {
   Popup,
@@ -84,10 +84,7 @@ const Home = () => {
                     {({ data: { locations } }) => {
                       return locations.map((location, i) => {
                         return (
-                          <Location
-                            location={location}
-                            key={`location__${i}`}
-                          />
+                          <Feature location={location} key={`location__${i}`} />
                         );
                       });
                     }}

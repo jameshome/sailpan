@@ -16,7 +16,7 @@ const Reports = ({ reports }) => {
       <nav>
         <ul>
           <li>
-            <a href="mailto:error@sailpan.info">Report error</a>
+            <a href="mailto:error@sailpan.info">Report an error</a>
           </li>
           <li>
             <a href="mailto:report@sailpan.info" className="primary">
@@ -37,12 +37,16 @@ const Reports = ({ reports }) => {
       <style jsx>
         {`
           div {
-            margin: 42px 24px 48px;
+            margin: 36px 0;
           }
 
           p {
-            margin: 6px 0;
+            margin: 6px 18px 6px 60px;
             font-size: 0.875rem;
+          }
+
+          nav {
+            margin: 6px 18px 6px 60px;
           }
 
           ul {
@@ -52,6 +56,7 @@ const Reports = ({ reports }) => {
             padding: 0;
             display: flex;
             justify-content: space-between;
+            align-items: center;
           }
 
           li {
@@ -61,10 +66,7 @@ const Reports = ({ reports }) => {
           li:first-child {
             margin-left: 0;
             margin-right: auto;
-          }
-
-          nav {
-            margin: 6px 0;
+            font-size: 0.875rem;
           }
 
           img {

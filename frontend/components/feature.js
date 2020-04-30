@@ -3,7 +3,7 @@ import { Marker } from "react-map-gl";
 import Pin from "./pin";
 import color from "../utils/style";
 
-const Location = ({ location }) => {
+const Feature = ({ location }) => {
   return (
     <Marker
       id={location.id}
@@ -14,4 +14,4 @@ const Location = ({ location }) => {
     </Marker>
   );
 };
-export default Location;
+export default Feature;
