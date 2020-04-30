@@ -1,0 +1,15 @@
+import gql from "graphql-tag";
+
+const LOCATIONS_QUERY = gql`
+query Locations {
+  locations {
+      id
+      name
+      type
+      status
+      latitude
+      longitude
+    }
+  }
+`;
+export default LOCATIONS_QUERY;

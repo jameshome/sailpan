@@ -9,5 +9,5 @@ export default {
   open: "rgba(71, 176, 142, 1.00)",
   uncertain: "rgba(252, 202, 62, 1.00)",
   closed: "rgba(236, 82, 99, 1.00)",
-  unknown: "rgba(153, 153, 153, 1.00)",
+  unknown: "rgba(187, 187, 187, 1.00)",
 };

@@ -15,6 +15,10 @@ query Reports {
     locations {
       id
       name
+      type
+      status
+      latitude
+      longitude
     }
     reporters {
       id

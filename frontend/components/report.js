@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Moment from "react-moment";
+import Pin from "./pin";
 import color from "../utils/style";
 
 const Report = ({ report }) => {
-  console.log(report.category.replace(/_/g, ""));
-
   let articleBackground = {
     backgroundImage:
       "url(../img/icon-report-" + report.category.replace(/_/g, "") + ".png)",
@@ -22,45 +21,47 @@ const Report = ({ report }) => {
           </h4>
         </time>
         <h4>{report.category.replace(/_/g, " ").toUpperCase()}</h4>
-        <h5>
-          {report.locations.map((location) => {
-            return (
-              <a href="" key={`${report.id}-${location.id}`}>
-                {location.name}
-              </a>
-            );
-          })}
-        </h5>
-        {report.conditions.map((condition) => {
+        {report.locations.map((location) => {
           return (
-            <strong key={`${report.id}-${condition.id}`}>
-              {condition.name}.{" "}
-            </strong>
+            <h5 key={`location__${report.id}-${location.id}`}>
+              <Pin color={color[location.status]} url="http://google.com" />
+              <a href="">{location.name}</a>
+            </h5>
           );
         })}
-        <span>{report.brief}</span>{" "}
-        {report.reporters.map((reporter) => {
-          if (reporter.url) {
+        <p>
+          {report.conditions.map((condition) => {
             return (
-              <em key={`${reporter.id}-${reporter.id}`}>
-                <a href={`${reporter.url}`} target="_blank">
-                  {reporter.name}
-                </a>
-              </em>
+              <strong key={`${report.id}-${condition.id}`}>
+                {condition.name}.{" "}
+              </strong>
             );
-          } else {
-            return (
-              <em key={`${report.id}-${reporter.id}`}> {reporter.name}</em>
-            );
-          }
-        })}
+          })}
+          <span>{report.brief}</span>
+          <br />
+          {report.reporters.map((reporter) => {
+            if (reporter.url) {
+              return (
+                <em key={`${reporter.id}-${reporter.id}`}>
+                  <a href={`${reporter.url}`} target="_blank">
+                    {reporter.name}
+                  </a>
+                </em>
+              );
+            } else {
+              return (
+                <em key={`${report.id}-${reporter.id}`}> {reporter.name}</em>
+              );
+            }
+          })}
+        </p>
       </article>
       <style jsx>
         {`
           article {
             position: relative;
             font-size: 0.875rem;
-            margin: 0 0 12px 0;
+            margin: 18px 0;
             padding-left: 48px;
             background: url(../img/icon-report-boatreport.png) top left / 36px
               no-repeat;
@@ -72,8 +73,12 @@ const Report = ({ report }) => {
             right: 0;
           }
 
+          p {
+            margin: 0;
+          }
+
           h2 {
-            margin: 0 0 6px 0;
+            margin: 0;
             padding-top: 12px;
             border-top: 1px solid ${color.blue50};
             text-align: center;
@@ -84,20 +89,19 @@ const Report = ({ report }) => {
           }
 
           h5 {
-            margin: 0;
+            margin: 2px 0 0 0;
+            display: inline-flex;
+            flex-flow: row no-wrap;
+            align-items: middle;
           }
 
           h5 a {
-            margin: 0 12px 0 0;
+            margin: 0 12px 0 4px;
           }
 
           strong,
           span {
             color: ${color.black};
-          }
-
-          em:first-of-type::before {
-            content: "— ";
           }
 
           em::after {

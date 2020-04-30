@@ -8,15 +8,15 @@ const Reports = ({ reports }) => {
   return (
     <div>
       <p>
-        These are uncertain times. SailPan reports are sourced with care, but
+        These are uncertain times. SAILPAN reports are sourced with care, but
         policies change and enforcement is variable. Use this information at
         your own risk, expect the unexpected, and above all, respect the locals.{" "}
-        <a href="/how">How SailPan works</a>
+        <a href="/how">How SAILPAN works</a>
       </p>
       <nav>
         <ul>
           <li>
-            <a href="mailto:error@sailpan.info">Report errors</a>
+            <a href="mailto:error@sailpan.info">Report error</a>
           </li>
           <li>
             <a href="mailto:report@sailpan.info" className="primary">

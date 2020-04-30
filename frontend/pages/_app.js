@@ -104,6 +104,7 @@ const App = ({ Component, pageProps, apollo }) => {
             background-color: ${color.orange};
             text-transform: uppercase;
             text-decoration: none;
+            white-space: nowrap;
             opacity: 90%;
           }
 
