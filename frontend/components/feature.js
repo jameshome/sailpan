@@ -10,8 +10,8 @@ const Feature = ({ location }) => {
       longitude={location.longitude}
       latitude={location.latitude}
     >
-      <Pin color={color[location.status]} url="http://google.com" />
+      <Pin color={color[location.status]} link={`location/${location.id}`} />
     </Marker>
   );
 };
-export default Feature;
+export default React.memo(Feature);

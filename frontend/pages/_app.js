@@ -1,7 +1,10 @@
 import React from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { ApolloProvider } from "@apollo/react-hooks";
 import withData from "../utils/data";
+import Header from "../components/header";
+
 import color from "../utils/style";
 
 const App = ({ Component, pageProps, apollo }) => {

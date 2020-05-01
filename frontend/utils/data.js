@@ -7,7 +7,7 @@ import fetch from "isomorphic-unfetch";
 const GRAPHQL_URL = process.env.DATA_URL;
 
 const link = createHttpLink({
-  fetch, // Switches between unfetch & node-fetch for client & server.
+  fetch, // Switches between unfetch & node-fetch
   uri: GRAPHQL_URL,
 });
 

@@ -20,6 +20,8 @@ import LOCATIONS_QUERY from "../queries/locations";
 const Home = () => {
   const router = useRouter();
 
+  const { pid } = router.query;
+
   const [viewport, setViewport] = useState({
     latitude: 24.75,
     longitude: -109.7,
@@ -109,12 +111,9 @@ const Home = () => {
                 flex-flow: column;
               }
 
-              header {
-                flex: 1;
-              }
-
               main {
                 display: flex;
+                flex: 1;
                 overflow: hidden;
                 flex-flow: row no-wrap;
               }

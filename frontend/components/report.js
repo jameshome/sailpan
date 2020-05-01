@@ -24,8 +24,14 @@ const Report = ({ report }) => {
         {report.locations.map((location) => {
           return (
             <h5 key={`location__${report.id}-${location.id}`}>
-              <Pin color={color[location.status]} url="http://google.com" />
-              <a href="">{location.name}</a>
+              <Pin
+                color={color[location.status]}
+                link={`location/${location.id}`}
+              />
+
+              <Link href="/location">
+                <a>{location.name}</a>
+              </Link>
             </h5>
           );
         })}
