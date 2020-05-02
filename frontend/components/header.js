@@ -1,5 +1,6 @@
 import React from "react";
 import Stats from "../components/stats";
+import { MapStateContext } from "../utils/mapstate";
 
 const Header = ({ region }) => {
   return (

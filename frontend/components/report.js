@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { FlyToInterpolator } from "react-map-gl";
 import Moment from "react-moment";
-import Pin from "./pin";
+import Pin from "../components/pin";
+import Locations from "../components/locations";
 import color from "../utils/style";
+import { MapStateContext } from "../utils/mapstate";
 
-const Report = ({ report }) => {
+const Report = ({ report, showLocation }) => {
   let articleBackground = {
     backgroundImage:
       "url(../img/icon-report-" + report.category.replace(/_/g, "") + ".png)",
   };
 
   return (
-    <div>
+    <div id={report.id}>
       {report.date && <h2>{report.date}</h2>}
-
       <article style={articleBackground}>
         <time>
           <h4>
@@ -21,20 +23,11 @@ const Report = ({ report }) => {
           </h4>
         </time>
         <h4>{report.category.replace(/_/g, " ").toUpperCase()}</h4>
-        {report.locations.map((location) => {
-          return (
-            <h5 key={`location__${report.id}-${location.id}`}>
-              <Pin
-                color={color[location.status]}
-                link={`location/${location.id}`}
-              />
 
-              <Link href="/location">
-                <a>{location.name}</a>
-              </Link>
-            </h5>
-          );
-        })}
+        {showLocation && (
+          <Locations report={report} key={`locations__${report.id}`} />
+        )}
+
         <p>
           {report.conditions.map((condition) => {
             return (
@@ -81,6 +74,7 @@ const Report = ({ report }) => {
 
           p {
             margin: 0;
+            color: ${color.black};
           }
 
           h2 {
@@ -94,20 +88,8 @@ const Report = ({ report }) => {
             margin: 0;
           }
 
-          h5 {
-            margin: 2px 0 0 0;
-            display: inline-flex;
-            flex-flow: row no-wrap;
-            align-items: middle;
-          }
-
-          h5 a {
-            margin: 0 12px 0 4px;
-          }
-
-          strong,
-          span {
-            color: ${color.black};
+          em {
+            color: ${color.blue};
           }
 
           em::after {

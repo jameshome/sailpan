@@ -1,5 +1,5 @@
 import React from "react";
-import Stat from "./stat";
+import Stat from "../components/stat";
 import color from "../utils/style";
 
 const Stats = ({ region }) => {

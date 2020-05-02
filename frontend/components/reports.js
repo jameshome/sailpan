@@ -1,6 +1,7 @@
 import React from "react";
-import Report from "./report";
+import Link from "next/link";
 import moment from "moment";
+import Report from "../components/report";
 import color from "../utils/style";
 
 const Reports = ({ reports }) => {
@@ -8,18 +9,30 @@ const Reports = ({ reports }) => {
   return (
     <div>
       <p>
-        These are uncertain times. SAILPAN reports are sourced with care, but
+        These are uncertain times. SailPan reports are sourced with care, but
         policies change and enforcement is variable. Use this information at
-        your own risk, expect the unexpected, and above all, respect the locals.{" "}
-        <a href="/how">How SAILPAN works</a>
+        your own risk, call ahead, expect the unexpected, and above all, respect
+        the locals.{" "}
+        <Link href="/how">
+          <a>How SailPan works</a>
+        </Link>
       </p>
       <nav>
         <ul>
           <li>
-            <a href="mailto:error@sailpan.info">Report an error</a>
+            <a
+              href="mailto:error@sailpan.info?Subject=SAILPAN: I found an error"
+              target="_blank"
+            >
+              Report an error
+            </a>
           </li>
           <li>
-            <a href="mailto:report@sailpan.info" className="primary">
+            <a
+              href="mailto:report@sailpan.info?Subject=SAILPAN: I have a report"
+              target="_blank"
+              className="primary"
+            >
               Send a Report
             </a>
           </li>
@@ -32,7 +45,13 @@ const Reports = ({ reports }) => {
           report.date = moment(date).format("MMMM DD, YYYY");
         }
         previousDate = date;
-        return <Report report={report} key={`report__${report.id}`} />;
+        return (
+          <Report
+            report={report}
+            key={`report__${report.id}`}
+            showLocation={true}
+          />
+        );
       })}
       <style jsx>
         {`

@@ -1,0 +1,31 @@
+import gql from "graphql-tag";
+
+const LOCATION_QUERY = gql`
+query Locations($id: ID!)  {
+  location(id: $id) {
+      id
+      name
+      type
+      status
+      latitude
+      longitude
+      reports(sort: "reported_at:desc") {
+        id
+        category
+        brief
+        detail
+        reported_at
+        conditions {
+          id
+          name
+        }
+        reporters {
+          id
+          name
+          url
+        }
+      }
+    }
+  }
+`;
+export default LOCATION_QUERY;

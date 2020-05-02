@@ -3,10 +3,7 @@ const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,
   C20.1,15.8,20.2,15.8,20.2,15.7z`;
 const SIZE = 20;
 
-const Pin = ({ color, link }) => {
-  const openLink = (link) => {
-    window.open(link, "_blank").focus();
-  };
+const Pin = ({ color }) => {
   return (
     <svg
       height={SIZE}
@@ -16,7 +13,6 @@ const Pin = ({ color, link }) => {
         fill: color,
         stroke: "none",
       }}
-      onClick={() => openLink(link)}
     >
       <path d={ICON} />
     </svg>
