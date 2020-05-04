@@ -65,8 +65,8 @@ const About = () => {
       <h2>CONTRIBUTING</h2>
       <p>
         <strong>SailPan thrives on your reports.</strong> Send reports to{" "}
-        <a href="mailto:reports@sailpan.info" target="_blank">
-          reports@sailpan.info
+        <a href="mailto:report@sailpan.info" target="_blank">
+          report@sailpan.info
         </a>{" "}
         with as much information as possible, including the name, latitude, and
         longitude of the location you are reporting about, the name of your boat
