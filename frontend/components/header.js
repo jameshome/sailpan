@@ -1,32 +1,41 @@
 import React from "react";
 import Stats from "../components/stats";
+import style from "../utils/style";
 import { MapStateContext } from "../utils/mapstate";
 
 const Header = ({ region }) => {
   return (
     <div>
-      <h3>
+      <p>
         pandemic-related port and passage information for liveaboard sailors
-      </h3>
-      <h1>Sailing Through the Pandemic</h1>
-      <h4>COVERAGE AREA — {region.name}</h4>
+      </p>
+      <strong>Sailing Through the Pandemic</strong>
+      <p>COVERAGE AREA — {region.name}</p>
       <Stats region={region} />
       <style jsx>
         {`
           div {
             width: 100%;
             position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: ${style.elevation.first};
             padding: 0 0 24px 0;
+            text-align: center;
           }
 
-          h1,
-          h3,
-          h4 {
-            width: 100%;
-            max-width: 770px;
-            text-align: center;
-            margin: 6px auto;
+          strong {
+            display: block;
+            margin: 9px 18px 6px;
+            font: ${style.font.site};
+            text-transform: uppercase;
+          }
+
+          p {
+            margin: 6px 12px;
+            font: ${style.font.body};
+          }
+
+          p:first-child {
+            font: ${style.font.tagline};
           }
         `}
       </style>

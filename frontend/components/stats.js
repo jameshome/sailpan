@@ -1,6 +1,6 @@
 import React from "react";
 import Stat from "../components/stat";
-import color from "../utils/style";
+import style from "../utils/style";
 
 const Stats = ({ region }) => {
   let previousDate;
@@ -25,8 +25,9 @@ const Stats = ({ region }) => {
             width: 100%;
             max-width: 770px;
             margin: auto;
-            background-color: ${color.cream};
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            background-color: ${style.color.cream};
+            box-shadow: ${style.elevation.first};
+            overflow-x: auto;
           }
         `}
       </style>

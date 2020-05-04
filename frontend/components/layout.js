@@ -4,7 +4,7 @@ import Header from "../components/header";
 import Map from "../components/map";
 import Query from "../components/query";
 import REGION_QUERY from "../queries/region";
-import color from "../utils/style";
+import style from "../utils/style";
 
 const Layout = ({ children }) => {
   return (
@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         return (
           <div>
             <Head>
-              <title>{region.name} — SAILPAN</title>
+              <title>{region.name} on SAILPAN</title>
               <meta
                 name="viewport"
                 content="initial-scale=1.0, width=device-width"
@@ -86,21 +86,21 @@ const Layout = ({ children }) => {
                   -moz-osx-font-smoothing: grayscale;
                   -moz-font-feature-settings: "liga" on;
                   font: 400 16px/1.4 Overpass, sans-serif;
-                  background-color: ${color.cream};
-                  color: ${color.blue};
+                  background-color: ${style.color.cream};
+                  color: ${style.color.blue};
                   letter-spacing: 0;
                   margin: 0;
                 }
 
                 a {
-                  color: ${color.orange};
+                  color: ${style.color.orange};
                   text-decoration: none;
                   border-bottom: 1px solid transparent;
                 }
 
                 a:hover {
-                  color: ${color.orange};
-                  border-bottom: 1px solid ${color.orange25};
+                  color: ${style.color.orange};
+                  border-bottom: 1px solid ${style.color.orange25};
                 }
 
                 a.primary {
@@ -110,10 +110,9 @@ const Layout = ({ children }) => {
                   font-size: 0.75rem;
                   line-height: 1rem;
                   border-radius: 1rem;
-                  height: 1rem;
                   padding: 4px 8px;
-                  color: ${color.cream};
-                  background-color: ${color.orange};
+                  color: ${style.color.cream};
+                  background-color: ${style.color.orange};
                   text-transform: uppercase;
                   text-decoration: none;
                   white-space: nowrap;
@@ -126,36 +125,6 @@ const Layout = ({ children }) => {
 
                 a.primary:active {
                   opacity: 100%;
-                }
-
-                h1 {
-                  font: 400 2.6em/0.8 "Racing Sans One", sans-serif;
-                  text-transform: uppercase;
-                }
-
-                h2 {
-                  font: 400 1.2em/0.8 "Racing Sans One", sans-serif;
-                  text-transform: uppercase;
-                }
-
-                h3 {
-                  font: 400 italic 1em/1.4 Overpass, sans-serif;
-                }
-
-                h4 {
-                  font: 400 0.9em/1.4 Overpass, sans-serif;
-                }
-
-                h5 {
-                  font: 300 1.3em/1.4 Overpass, sans-serif;
-                }
-
-                strong {
-                  font-weight: 600;
-                }
-
-                em {
-                  font-style: italic;
                 }
               `}
             </style>
@@ -180,7 +149,7 @@ const Layout = ({ children }) => {
               }
 
               .map {
-                background-color: ${color.blue08};
+                background-color: ${style.color.blue08};
               }
             `}</style>
           </div>

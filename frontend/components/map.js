@@ -8,7 +8,6 @@ import MapGL, {
 import Feature from "../components/feature";
 import Query from "../components/query";
 import LOCATIONS_QUERY from "../queries/locations";
-import color from "../utils/style";
 import { MapStateContext } from "../utils/mapstate";
 
 const Locations = () => {
@@ -43,7 +42,7 @@ const Locations = () => {
       {...mapState}
       width="100%"
       height="100%"
-      mapStyle="mapbox://styles/jameshome/ck9cf3tsd02al1imu0usk65qh"
+      mapStyle={process.env.MAPBOX_STYLE_URL}
       onViewportChange={(nextViewport) => setMapState(nextViewport)}
       mapboxApiAccessToken={process.env.MAPBOX_API_KEY}
     >

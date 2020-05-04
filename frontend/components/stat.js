@@ -1,5 +1,5 @@
 import React from "react";
-import color from "../utils/style";
+import style from "../utils/style";
 
 const Regionstat = ({ stat }) => {
   let addcommas = (num) => {
@@ -18,53 +18,54 @@ const Regionstat = ({ stat }) => {
         alt={stat.name}
       />
       <div>
-        <h2>{addcommas(stat.cases)}</h2>
-        <p>cases</p>
+        <span>{addcommas(stat.cases)}</span>
+        cases
       </div>
       <div>
-        <h2>{addcommas(stat.deaths)}</h2>
-        <p>deaths</p>
+        <span>{addcommas(stat.deaths)}</span>
+        deaths
       </div>
       <style jsx>
         {`
           a {
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
             margin: 3px 3px;
-            color: ${color.blue};
-            background-color: ${color.blue08};
+            color: ${style.color.blue};
+            background-color: ${style.color.blue08};
             border-radius: 21px;
             flex: 1;
           }
 
-          div {
-            text-align: center;
-            flex: 1;
-          }
-
-          div:first-of-type {
-            border-right: 3px solid ${color.cream};
-          }
-
-          p {
-            margin: 0;
-            font-size: 0.875rem;
-          }
-
-          p:first-child {
+          a:first-child {
             margin-right: 0;
           }
 
-          p:last-child {
+          a:last-child {
             margin-left: 0;
+          }
+
+          div {
+            flex: 1;
+            text-align: center;
+            font: ${style.font.body};
+            line-height: 1;
+            padding: 0 6px;
+          }
+
+          div:first-of-type {
+            border-right: 3px solid ${style.color.cream};
+          }
+
+          span {
+            font: ${style.font.stat};
+            display: block;
+            margin: 2px 0;
           }
 
           img {
             margin: 3px;
-          }
-
-          h2 {
-            margin: 6px 0 0 0;
           }
         `}
       </style>

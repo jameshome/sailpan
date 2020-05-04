@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FlyToInterpolator } from "react-map-gl";
 import { Marker } from "react-map-gl";
 import Pin from "../components/pin";
-import color from "../utils/style";
+import style from "../utils/style";
 import { MapStateContext } from "../utils/mapstate";
 
 const Feature = ({ location }) => {
@@ -29,7 +29,7 @@ const Feature = ({ location }) => {
               });
             }}
           >
-            <Pin color={color[location.status]} />
+            <Pin color={style.color[location.status]} />
           </span>
         </span>
       </Link>

@@ -2,41 +2,38 @@ import React from "react";
 import Link from "next/link";
 import moment from "moment";
 import Report from "../components/report";
-import color from "../utils/style";
+import style from "../utils/style";
 
 const Reports = ({ reports }) => {
   let previousDate;
   return (
     <div>
+      <h1>Welcome to SAILPAN</h1>
       <p>
-        These are uncertain times. SailPan reports are sourced with care, but
-        policies change and enforcement is variable. Use this information at
-        your own risk, call ahead, expect the unexpected, and above all, respect
-        the locals.{" "}
-        <Link href="/how">
-          <a>How SailPan works</a>
-        </Link>
+        SAILPAN port and passage reports are sourced with care, but policies
+        change and enforcement is variable. Use this information at your own
+        risk, call ahead, expect the unexpected, and above all, respect the
+        locals.{" "}
       </p>
       <nav>
-        <ul>
-          <li>
-            <a
-              href="mailto:error@sailpan.info?Subject=SAILPAN: I found an error"
-              target="_blank"
-            >
-              Report an error
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto:report@sailpan.info?Subject=SAILPAN: I have a report"
-              target="_blank"
-              className="primary"
-            >
-              Send a Report
-            </a>
-          </li>
-        </ul>
+        <a
+          href="mailto:error@sailpan.info?Subject=SAILPAN: I found an error"
+          target="_blank"
+        >
+          Report an error
+        </a>
+
+        <Link href="/how">
+          <a>About SAILPAN</a>
+        </Link>
+
+        <a
+          href="mailto:report@sailpan.info?Subject=SAILPAN: I have a report"
+          target="_blank"
+          className="primary"
+        >
+          Send a Report
+        </a>
       </nav>
       {reports.map((report, i) => {
         let printDate;
@@ -53,44 +50,37 @@ const Reports = ({ reports }) => {
           />
         );
       })}
+
       <style jsx>
         {`
           div {
-            margin: 36px 0;
+            margin: 48px 0;
+            font: ${style.font.body};
+          }
+
+          h1 {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
           }
 
           p {
             margin: 6px 18px 6px 60px;
-            font-size: 0.875rem;
           }
 
           nav {
-            margin: 6px 18px 6px 60px;
-          }
-
-          ul {
-            width: 100%;
+            margin: 12px 15px 12px 60px;
             list-style: none;
-            margin: 0;
             padding: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
           }
 
-          li {
-            margin: 0 0 12px 18px;
-          }
-
-          li:first-child {
-            margin-left: 0;
-            margin-right: auto;
-            font-size: 0.875rem;
-          }
-
-          img {
-            display: block;
-            margin: 48px auto;
+          nav a {
+            text-align: center;
+            line-height: 1.2;
+            margin-right: 3px;
           }
         `}
       </style>

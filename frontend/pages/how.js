@@ -47,6 +47,18 @@ const About = () => {
         who are interested in managing SailPan reports in their region. If
         that's you, please get in touch.
       </p>
+
+      <h2>CONTRIBUTING</h2>
+      <p>
+        You can{" "}
+        <a
+          href="https://github.com/jameshome/sailpan/issues/new"
+          target="_blank"
+        >
+          report bugs or make feature requests
+        </a>{" "}
+        on GitHub.
+      </p>
     </div>
   );
 };
