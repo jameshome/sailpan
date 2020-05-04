@@ -16,19 +16,19 @@ const About = () => {
       </div>
       <p>
         <strong>
-          Passagemaking was challenging enough before the global pandemic.
+          Passagemaking was challenging before the global pandemic.
         </strong>{" "}
         Now, liveaboard sailors and ocean voyagers are contending with new
-        uncertainties as the communities around the ports and anchorages we rely
-        on decide how to protect themselves from COVID-19. While these are real
-        new challenges, rumors often paint an even bleaker picture than the
-        reality, and the facts we need to plan our passages are often buried
-        several posts deep in a hard to find comment thread, quickly relayed on
-        a radio net, or mentioned in passing on the docks.
+        uncertainties, as the communities around the ports and anchorages
+        mariners rely on decide how to protect themselves from COVID-19. While
+        these are real new challenges, rumors often paint an even bleaker
+        picture than the reality, and the facts we need to plan our passages are
+        often buried several posts deep in a hard to find comment thread,
+        relayed quickly on a radio net, or mentioned in passing on the docks.
       </p>
 
       <p>
-        <strong>That's where SailPan comes in.</strong> SailPan provides sailors
+        <strong>That's where SailPan can help.</strong> SailPan provides sailors
         with a daily digest of reported changes to critical ports, anchorages,
         channels, and towns in the region. Reports come in from officials,
         marinas, and boats. Whenever possible, sources are shown to give you a
@@ -44,9 +44,9 @@ const About = () => {
         </strong>{" "}
         Sailors need the scuttlebutt now more than ever, but there are already
         dozens of amazing communities out there, and we'd rather send you to
-        them for the conversation. For many reports, you'll find links to the
-        communities where that news is being discussed, and we encourage you to
-        participate in the conversations there.
+        them. For many reports, you'll find links to the communities where that
+        news is being discussed, and we encourage you to participate in the
+        conversations there.
       </p>
 
       <h2>REGIONS</h2>
@@ -67,11 +67,15 @@ const About = () => {
         <strong>SailPan thrives on your reports.</strong> Send reports to{" "}
         <a href="mailto:reports@sailpan.info" target="_blank">
           reports@sailpan.info
-        </a>
-        , including as much information as possible, including the name,
-        latitude, and longitude of the location you are reporting about, the
-        name of your boat or organization, and a link to your website if you
-        have one. You can also contribute to the site itself. SailPan is open
+        </a>{" "}
+        with as much information as possible, including the name, latitude, and
+        longitude of the location you are reporting about, the name of your boat
+        or organization, and a link to your website if you have one. If didn't
+        experience what you are reporting first hand, please also include your
+        sources.
+      </p>
+      <p>
+        Developers can also contribute to the site's codebase. SailPan is open
         source and hosted on{" "}
         <a href="https://github.com/jameshome/sailpan/" target="_blank">
           GitHub
@@ -88,9 +92,15 @@ const About = () => {
       <h2>STAFF</h2>
       <p>
         <strong>
-          SailPan was created by <a href="https://jameshome.com">James Home,</a>
+          SailPan was created by{" "}
+          <a href="https://jameshome.com" target="_blank">
+            James Home,
+          </a>
         </strong>{" "}
-        aboard <a href="https://gettingfr.ee/rejoice/">SV Rejoice.</a>
+        aboard{" "}
+        <a href="https://gettingfr.ee/rejoice/" target="_blank">
+          SV Rejoice.
+        </a>
       </p>
       <style jsx>
         {`
