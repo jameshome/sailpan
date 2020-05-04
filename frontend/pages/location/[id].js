@@ -31,7 +31,7 @@ const Location = () => {
         return (
           <>
             <Head>
-              <title>{location.name} on SAILPAN</title>
+              <title>{location.name} — SailPan</title>
             </Head>
             <div className="details">
               <Link href={router.query.return ? router.query.return : "/"}>
@@ -58,7 +58,7 @@ const Location = () => {
               <Pin color={style.color[location.status]} />
               <span
                 style={{
-                  color: style.color[location.status + "text"],
+                  color: style.color[location.status + "_text"],
                 }}
               >
                 {detailedStatus(location.status)}
@@ -115,6 +115,7 @@ const Location = () => {
                 img {
                   align-self: center;
                   margin: 0 12px;
+                  cursor: pointer;
                 }
 
                 p {

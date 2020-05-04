@@ -31,11 +31,11 @@ const Regionstat = ({ stat }) => {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            margin: 3px 3px;
+            margin: 3px;
             color: ${style.color.blue};
-            background-color: ${style.color.blue08};
+            background-color: ${style.color.blue_08};
             border-radius: 21px;
-            flex: 1;
+            flex: 1 0;
           }
 
           a:first-child {
@@ -51,7 +51,7 @@ const Regionstat = ({ stat }) => {
             text-align: center;
             font: ${style.font.body};
             line-height: 1;
-            padding: 0 6px;
+            padding: 0 12px;
           }
 
           div:first-of-type {

@@ -79,9 +79,9 @@ const Report = ({ report, showLocation }) => {
           }
 
           h2 {
-            margin: 0 18px 0 60px;
+            margin: 0;
             padding-top: 12px;
-            border-top: 1px solid ${style.color.blue25};
+            border-top: 1px solid ${style.color.blue_25};
             text-align: center;
             font: ${style.font.heading};
             text-transform: uppercase;

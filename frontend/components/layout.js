@@ -11,9 +11,9 @@ const Layout = ({ children }) => {
     <Query query={REGION_QUERY} vars={{ id: 1 }}>
       {({ data: { region } }) => {
         return (
-          <div>
+          <div className="layout">
             <Head>
-              <title>{region.name} on SAILPAN</title>
+              <title>{region.name} — SailPan</title>
               <meta
                 name="viewport"
                 content="initial-scale=1.0, width=device-width"
@@ -23,9 +23,10 @@ const Layout = ({ children }) => {
             <header>
               <Header region={region} />
             </header>
-
             <main>
-              <section>{children}</section>
+              <section className="reports">
+                <div>{children}</div>
+              </section>
               <section className="map">
                 <Map />
               </section>
@@ -100,7 +101,7 @@ const Layout = ({ children }) => {
 
                 a:hover {
                   color: ${style.color.orange};
-                  border-bottom: 1px solid ${style.color.orange25};
+                  border-bottom: 1px solid ${style.color.orange_25};
                 }
 
                 a.primary {
@@ -126,30 +127,70 @@ const Layout = ({ children }) => {
                 a.primary:active {
                   opacity: 100%;
                 }
+
+                strong {
+                  font-weight: 600;
+                }
+
+                .nowrap {
+                  white-space: nowrap;
+                }
               `}
             </style>
             <style jsx>{`
-              div {
+              .layout {
                 height: 100vh;
-                overflow: hidden;
-                display: flex;
-                flex-flow: column;
-              }
-
-              main {
-                display: flex;
-                flex: 1;
-                overflow: hidden;
-                flex-flow: row no-wrap;
-              }
-
-              section {
-                flex: 1;
                 overflow-y: auto;
               }
 
+              main {
+                overflow-y: auto;
+              }
+
+              .reports div {
+                margin: 36px 0 450px;
+              }
+
               .map {
-                background-color: ${style.color.blue08};
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 40vh;
+                max-height: 425px;
+                background-color: ${style.color.blue_08};
+                box-shadow: ${style.elevation.up};
+              }
+
+              @media screen and ${style.breakpoint.columns} {
+                .layout {
+                  overflow: hidden;
+                  display: flex;
+                  flex-flow: column;
+                }
+
+                main {
+                  display: flex;
+                  flex: 1;
+                  overflow: hidden;
+                  flex-flow: row no-wrap;
+                }
+
+                section {
+                  flex: 1;
+                  overflow-y: auto;
+                }
+
+                .reports div {
+                  margin: 36px 0 72px;
+                }
+
+                .map {
+                  position: relative;
+                  height: auto;
+                  max-height: none;
+                  box-shadow: 0;
+                }
               }
             `}</style>
           </div>

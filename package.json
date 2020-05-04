@@ -1,6 +1,6 @@
 {
   "name": "sailpan",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "install-backend": "cd backend && yarn && yarn dev",
     "install-frontend": "cd frontend && yarn && yarn dev",

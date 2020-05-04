@@ -7,32 +7,36 @@ import style from "../utils/style";
 const Reports = ({ reports }) => {
   let previousDate;
   return (
-    <div>
-      <h1>Welcome to SAILPAN</h1>
+    <>
+      <h1>Welcome to SailPan</h1>
+
+      <p className="tagline">Pandemic-related port & passage reports</p>
+
+      <p className="region">for Pacific Mexico & Gulf of California</p>
+
       <p>
-        SAILPAN port and passage reports are sourced with care, but policies
+        SailPan port and passage reports are sourced with care, but policies
         change and enforcement is variable. Use this information at your own
         risk, call ahead, expect the unexpected, and above all, respect the
         locals.{" "}
+        <Link href="/about">
+          <a>About</a>
+        </Link>
       </p>
       <nav>
         <a
           href="mailto:error@sailpan.info?Subject=SAILPAN: I found an error"
           target="_blank"
         >
-          Report an error
+          Report error
         </a>
-
-        <Link href="/how">
-          <a>About SAILPAN</a>
-        </Link>
 
         <a
           href="mailto:report@sailpan.info?Subject=SAILPAN: I have a report"
           target="_blank"
           className="primary"
         >
-          Send a Report
+          Send Report
         </a>
       </nav>
       {reports.map((report, i) => {
@@ -53,23 +57,31 @@ const Reports = ({ reports }) => {
 
       <style jsx>
         {`
-          div {
-            margin: 48px 0;
-            font: ${style.font.body};
-          }
-
           h1 {
             position: absolute;
             top: -9999px;
             left: -9999px;
           }
 
+          .tagline {
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1.1;
+          }
+
+          .region {
+            text-align: center;
+            font-weight: 600;
+          }
+
           p {
-            margin: 6px 18px 6px 60px;
+            font: ${style.font.body};
+            margin: 3px 18px;
           }
 
           nav {
-            margin: 12px 15px 12px 60px;
+            font: ${style.font.body};
+            margin: 6px 18px 12px;
             list-style: none;
             padding: 0;
             display: flex;
@@ -80,11 +92,10 @@ const Reports = ({ reports }) => {
           nav a {
             text-align: center;
             line-height: 1.2;
-            margin-right: 3px;
           }
         `}
       </style>
-    </div>
+    </>
   );
 };
 export default Reports;

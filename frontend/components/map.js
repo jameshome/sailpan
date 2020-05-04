@@ -9,33 +9,10 @@ import Feature from "../components/feature";
 import Query from "../components/query";
 import LOCATIONS_QUERY from "../queries/locations";
 import { MapStateContext } from "../utils/mapstate";
+import style from "../utils/style";
 
 const Locations = () => {
   const [mapState, setMapState] = useContext(MapStateContext);
-
-  const navigationStyle = {
-    position: "absolute",
-    top: 36,
-    right: 0,
-    padding: "10px",
-    opacity: 0.5,
-  };
-
-  const fullscreenStyle = {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    padding: "10px",
-    opacity: 0.5,
-  };
-
-  const scaleStyle = {
-    position: "absolute",
-    top: 24,
-    left: 0,
-    padding: "10px",
-    opacity: 0.75,
-  };
 
   return (
     <MapGL
@@ -53,15 +30,43 @@ const Locations = () => {
           });
         }}
       </Query>
-      <div>
+      <div className="scale">
         <ScaleControl unit="nautical" />
       </div>
-      <div style={fullscreenStyle}>
+      <div className="fullscreen">
         <FullscreenControl />
       </div>
-      <div style={navigationStyle}>
+      <div className="navigation">
         <NavigationControl />
       </div>
+      <style jsx>{`
+        .scale {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 10px;
+          opacity: 0.75;
+        }
+        .fullscreen {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 10px;
+          opacity: 0.5;
+        }
+        .navigation {
+          position: absolute;
+          top: 36px;
+          right: 0;
+          padding: 10px;
+          opacity: 0.5;
+        }
+        @media screen and ${style.breakpoint.columns} {
+          .scale {
+            top: 24px;
+          }
+        }
+      `}</style>
     </MapGL>
   );
 };

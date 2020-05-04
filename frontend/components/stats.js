@@ -22,13 +22,22 @@ const Stats = ({ region }) => {
             bottom: -24px;
             height: 48px;
             border-radius: 24px;
-            width: 100%;
-            max-width: 770px;
-            margin: auto;
+            margin: auto 6px;
             background-color: ${style.color.cream};
-            box-shadow: ${style.elevation.first};
+            box-shadow: ${style.elevation.inset};
             overflow-x: auto;
           }
+          @media screen and ${style.breakpoint.columns} {
+            div {
+            }
+
+          @media screen and ${style.breakpoint.widestats} {
+            div {
+              width: 100%;
+              max-width: 770px;
+              margin: auto;
+              box-shadow: ${style.elevation.down};
+            }
         `}
       </style>
     </div>
