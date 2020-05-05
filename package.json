@@ -2,8 +2,8 @@
   "name": "sailpan",
   "version": "1.0.0",
   "scripts": {
-    "install-backend": "cd backend && yarn && yarn dev",
-    "install-frontend": "cd frontend && yarn && yarn dev",
+    "install-backend": "cd backend && yarn",
+    "install-frontend": "cd frontend && yarn",
     "build": "yarn && npm-run-all -p build-*",
     "build-backend": "cd backend && yarn build",
     "build-frontend": "cd frontend && yarn build",
