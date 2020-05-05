@@ -19,7 +19,7 @@ const About = () => {
           Passagemaking was challenging before the global pandemic.
         </strong>{" "}
         Now, liveaboard sailors and ocean voyagers are contending with new
-        uncertainties, as the communities around the ports and anchorages
+        uncertainties, as the communities around the ports and anchorages we
         mariners rely on decide how to protect themselves from COVID-19. While
         these are real new challenges, rumors often paint an even bleaker
         picture than the reality, and the facts we need to plan our passages are

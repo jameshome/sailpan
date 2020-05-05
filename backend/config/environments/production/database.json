@@ -4,12 +4,12 @@
     "default": {
       "connector": "bookshelf",
       "settings": {
-        "client": "sqlite",
-        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
-        "port": "${process.env.DATABASE_PORT || 27017}",
-        "database": "${process.env.DATABASE_NAME || 'strapi'}",
-        "username": "${process.env.DATABASE_USERNAME || ''}",
-        "password": "${process.env.DATABASE_PASSWORD || ''}"
+        "client": "mysql",
+        "host": "${process.env.PROD_DATABASE_HOST}",
+        "port": "${process.env.PROD_DATABASE_PORT}",
+        "database": "${process.env.PROD_DATABASE_NAME}",
+        "username": "${process.env.PROD_DATABASE_USERNAME}",
+        "password": "${process.env.PROD_DATABASE_PASSWORD}"
       },
       "options": {}
     }

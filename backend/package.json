@@ -11,6 +11,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "find-config": "^1.0.0",
     "knex": "<0.20.0",
     "sqlite3": "latest",
     "strapi": "3.0.0-beta.20",
