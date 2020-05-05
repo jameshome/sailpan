@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "sailpan-backend",
       cwd: "/domains/sailpan.info/dist/backend",
-      script: "yarn",
+      script: "npm",
       args: "start",
       node_args: "-r dotenv/config",
       env: {
