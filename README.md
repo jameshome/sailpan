@@ -4,7 +4,7 @@
 
 ### Backend
 
-The backend API is served by [Strapi](https://strapi.io/) using [GraphQL](https://graphql.org/).
+The backend API is served by [Strapi](https://strapi.io/) using [GraphQL](https://graphql.org/). We persist with [SQLite](https://www.sqlite.org/) in development and [MySQL](http://www.mysql.com) in production, both connected to Strapi through [Bookshelf](https://bookshelfjs.org/).
 
 ### Frontend
 
@@ -27,6 +27,12 @@ This will install required `node_modules` and start dev instances of the fronten
 
 - **css**: Set all colors, elevations, and fonts in `utils/style`. Call the corresponding object properties in each component's `<style jsx>` elements. Use global css and inline styling sparingly.
 
+- **js**: Use the [Prettier](https://prettier.io/) defaults. Use function components and [Hooks](https://reactjs.org/docs/hooks-intro.html) instead of classes.
+
+### Deployment
+
+Strapi and Next.js are both run as [pm2](https://pm2.keymetrics.io/) processes, proxied through [nginx](www.nginx.com). Environment variables are persisted with [dotenv](https://github.com/motdotla/dotenv) in separately deployed `.env` files.
+
 ### Tools
 
-[Coordinate Converter](https://www.pgc.umn.edu/apps/convert/)
+[GPS Coordinate Converter](https://www.pgc.umn.edu/apps/convert/)
