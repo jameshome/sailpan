@@ -3,8 +3,6 @@ import Link from "next/link";
 import Stats from "../components/stats";
 import style from "../utils/style";
 
-import { MapStateContext } from "../utils/mapstate";
-
 const Header = ({ region }) => {
   return (
     <div>

@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Header from "../components/header";
 import Map from "../components/map";
 import Meta from "../components/meta";
@@ -13,18 +12,6 @@ const Layout = ({ children }) => {
       {({ data: { region } }) => {
         return (
           <div className="layout">
-            <Head>
-              <meta
-                name="viewport"
-                content="initial-scale=1.0, width=device-width"
-              />
-              <link rel="icon" href="/favicon.png" />
-            </Head>
-            <Meta
-              title={region.name}
-              url="https://sailpan.info"
-              description="Pandemic-related port & passage reports"
-            />
             <header>
               <Header region={region} />
             </header>

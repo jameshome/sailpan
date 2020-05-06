@@ -18,6 +18,8 @@ const Meta = ({ title, url, description }) => {
       <meta name="twitter:title" value={title + " on SailPan"} />
       <meta name="twitter:description" value={description} />
       <meta name="twitter:url" value={url} />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="icon" href="/favicon.png" />
     </Head>
   );
 };

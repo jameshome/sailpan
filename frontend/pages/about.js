@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import Meta from "../components/meta";
 import style from "../utils/style";
@@ -6,9 +5,6 @@ import style from "../utils/style";
 const About = () => {
   return (
     <>
-      <Head>
-        <title>About SailPan — SailPan</title>
-      </Head>
       <Meta
         title="About Sailpan"
         url="https://sailpan.info/about"
