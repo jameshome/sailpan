@@ -69,7 +69,3 @@ pm2 restart ecosystem.config.js
 ### Tools
 
 [GPS Coordinate Converter](https://www.pgc.umn.edu/apps/convert/)
-
-```
-
-```
