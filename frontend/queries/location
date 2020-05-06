@@ -9,6 +9,7 @@ query Locations($id: ID!)  {
       status
       latitude
       longitude
+      website
       reports(sort: "reported_at:desc") {
         id
         category
