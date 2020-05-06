@@ -148,7 +148,7 @@ const Layout = ({ children }) => {
                 bottom: 0;
                 left: 0;
                 right: 0;
-                height: 40vh;
+                height: 35vh;
                 max-height: 425px;
                 background-color: ${style.color.blue_08};
                 box-shadow: ${style.elevation.up};
