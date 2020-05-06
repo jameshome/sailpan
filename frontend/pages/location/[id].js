@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import moment from "moment";
 import Report from "../../components/report";
 import Pin from "../../components/pin";
+import Meta from "../../components/meta";
 import Query from "../../components/query";
 import LOCATION_QUERY from "../../queries/location";
 import style from "../../utils/style";
@@ -24,15 +25,17 @@ const Location = () => {
             case "closed":
               return "Major disruptions or closures";
             default:
-              return "Status unknown";
+              return "Situation unknown";
           }
         };
-
         return (
           <>
-            <Head>
-              <title>{location.name} — SailPan</title>
-            </Head>
+            <Meta
+              title={location.name}
+              url={"https://sailpan.info/location/" + location.id}
+              description="Pandemic-related port & passage reports"
+            />
+
             <div className="details">
               <Link href={router.query.return ? router.query.return : "/"}>
                 <img

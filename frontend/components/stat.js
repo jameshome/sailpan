@@ -46,6 +46,10 @@ const Regionstat = ({ stat }) => {
             margin-left: 0;
           }
 
+          a:hover {
+            color: ${style.color.blue};
+          }
+
           div {
             flex: 1;
             text-align: center;

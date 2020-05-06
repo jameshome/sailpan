@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Header from "../components/header";
 import Map from "../components/map";
+import Meta from "../components/meta";
 import Query from "../components/query";
 import REGION_QUERY from "../queries/region";
 import style from "../utils/style";
@@ -13,13 +14,17 @@ const Layout = ({ children }) => {
         return (
           <div className="layout">
             <Head>
-              <title>{region.name} — SailPan</title>
               <meta
                 name="viewport"
                 content="initial-scale=1.0, width=device-width"
               />
               <link rel="icon" href="/favicon.png" />
             </Head>
+            <Meta
+              title={region.name}
+              url="https://sailpan.info"
+              description="Pandemic-related port & passage reports"
+            />
             <header>
               <Header region={region} />
             </header>

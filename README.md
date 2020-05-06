@@ -15,6 +15,7 @@ The `sailpan` frontend is written in [React](https://reactjs.org/) and [Next.js]
 You'll want [node](https://nodejs.org) 12 LTS, [yarn](https://yarnpkg.com/) and a clone of this repository.
 
 ```
+git clone git@github.com:jameshome/sailpan.git
 cd sailpan
 yarn install-backend
 yarn install-frontend
@@ -33,6 +34,42 @@ This will install required `node_modules` and start dev instances of the fronten
 
 Strapi and Next.js are both run as [pm2](https://pm2.keymetrics.io/) processes, proxied through [nginx](www.nginx.com). Environment variables are persisted with [dotenv](https://github.com/motdotla/dotenv) in separately deployed `.env` files.
 
+Initial deployment looks something like this:
+
+```
+git clone git@github.com:jameshome/sailpan.git
+cd dist/backend
+yarn
+scp example.com:~/src/sailpan/frontend/.env .
+env NODE_ENV=production yarn build
+pm2 start ecosystem.config.js
+cd dist/frontend
+yarn
+scp example.com:~/src/sailpan/backend/.env .
+env NODE_ENV=production yarn build
+pm2 start ecosystem.config.js
+pm2 startup
+pm2 save
+```
+
+Ultimately deployment will be automated, but until then:
+
+```
+git clone git@github.com:jameshome/sailpan.git
+cd dist/backend
+yarn
+env NODE_ENV=production yarn build
+pm2 restart ecosystem.config.js
+cd dist/frontend
+yarn
+env NODE_ENV=production yarn build
+pm2 restart ecosystem.config.js
+```
+
 ### Tools
 
 [GPS Coordinate Converter](https://www.pgc.umn.edu/apps/convert/)
+
+```
+
+```

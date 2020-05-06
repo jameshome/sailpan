@@ -36,7 +36,7 @@ const Query = ({ children, query, vars }) => {
             width: 50vw;
           }
           p {
-            font-size: 4px;
+            font-size: 6px;
           }
         `}</style>
       </div>

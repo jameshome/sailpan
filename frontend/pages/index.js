@@ -1,3 +1,4 @@
+import React from "react";
 import Query from "../components/query";
 import Reports from "../components/reports";
 

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Meta from "../components/meta";
 import style from "../utils/style";
 
 const About = () => {
@@ -8,6 +9,12 @@ const About = () => {
       <Head>
         <title>About SailPan — SailPan</title>
       </Head>
+      <Meta
+        title="About Sailpan"
+        url="https://sailpan.info/about"
+        description="Pandemic-related port & passage reports"
+      />
+
       <div className="details">
         <Link href="/">
           <img src="/img/icon-back.png" width="36" height="36" alt="Back" />
