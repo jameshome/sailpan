@@ -23,7 +23,7 @@ const Location = () => {
               return "Some restrictions reported";
             case "closed":
               return "Major restrictions or closures reported";
-            case "Uncertain":
+            case "uncertain":
               return "Conflicting information reported";
             default:
               return "No information reported";
