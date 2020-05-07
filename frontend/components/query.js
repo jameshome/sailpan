@@ -21,7 +21,7 @@ const Query = ({ children, query, vars }) => {
               url("../fnt/racing-sans-one-v7-latin-regular.woff") format("woff");
           }
           body {
-            font: ${style.font.heading};
+            font: ${style.font.heading_1};
             background-color: ${style.color.cream};
             color: ${style.color.blue};
             margin: 0;
