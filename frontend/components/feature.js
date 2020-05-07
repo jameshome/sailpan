@@ -23,8 +23,8 @@ const Feature = ({ location }) => {
                 ...mapState,
                 latitude: location.latitude,
                 longitude: location.longitude,
-                zoom: 9,
-                transitionDuration: 1000,
+                zoom: 11,
+                transitionDuration: 1500,
                 transitionInterpolator: new FlyToInterpolator(),
               });
             }}
