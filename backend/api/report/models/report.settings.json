@@ -10,13 +10,13 @@
   },
   "attributes": {
     "conditions": {
-      "via": "reports",
       "collection": "report-category",
+      "via": "reports",
       "dominant": true
     },
     "locations": {
-      "via": "reports",
       "collection": "location",
+      "via": "reports",
       "dominant": true
     },
     "detail": {
@@ -38,7 +38,9 @@
       "enum": [
         "boat_report",
         "marina_announcement",
-        "official_notice"
+        "official_notice",
+        "local_knowledge",
+        "unicorn_chaser"
       ]
     }
   }

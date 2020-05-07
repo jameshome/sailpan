@@ -16,8 +16,8 @@
       "type": "text"
     },
     "reports": {
-      "collection": "report",
-      "via": "conditions"
+      "via": "conditions",
+      "collection": "report"
     }
   }
 }
