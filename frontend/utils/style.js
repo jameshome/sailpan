@@ -2,6 +2,7 @@ const Style = {
   color: {
     cream: "rgba(255, 251, 241, 1.00)",
     blue: "rgba(0, 122, 158, 1.00)",
+    blue_50: "rgba(0, 122, 158, 0.50)",
     blue_25: "rgba(0, 122, 158, 0.25)",
     blue_08: "rgba(0, 122, 158, 0.08)",
     orange: "rgba(204, 102, 17, 1.00)",
@@ -27,8 +28,8 @@ const Style = {
     tagline: " 400 0.875rem/1 Overpass, sans-serif",
     title: "400 1.4rem/1 Overpass, sans-serif",
     stat: "400 1.2rem/0.8 'Racing Sans One', sans-serif",
-    heading: "400 1.2rem/0.8 'Racing Sans One', sans-serif",
-    location: "400 1.1rem/1.4 Overpass, sans-serif",
+    heading_1: "400 1.2rem/0.8 'Racing Sans One', sans-serif",
+    heading_2: "400 1.1rem/1.4 Overpass, sans-serif",
     body: "400 0.875rem/1.4 Overpass, sans-serif",
     label: "400 0.875rem/1 Overpass, sans-serif",
   },

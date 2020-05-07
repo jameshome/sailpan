@@ -19,12 +19,14 @@ const Location = () => {
           switch (status) {
             case "open":
               return "Business as usual or nearly so";
-            case "uncertain":
-              return "Reduced services or conflicting reports";
+            case "limited":
+              return "Some restrictions reported";
             case "closed":
-              return "Major disruptions or closures";
+              return "Major restrictions or closures reported";
+            case "Uncertain":
+              return "Conflicting information reported";
             default:
-              return "Situation unknown";
+              return "No information reported";
           }
         };
         return (
@@ -63,6 +65,7 @@ const Location = () => {
                   color: style.color[location.status + "_text"],
                 }}
               >
+                <strong>{location.status}</strong>
                 {detailedStatus(location.status)}
               </span>
             </div>
@@ -92,6 +95,13 @@ const Location = () => {
                 .status {
                   align-items: center;
                   margin: 0 18px 12px 60px;
+                  font: ${style.font.body};
+                }
+
+                .status strong {
+                  text-transform: capitalize;
+                  font: ${style.font.heading_2};
+                  padding-right: 6px;
                 }
 
                 h1 {

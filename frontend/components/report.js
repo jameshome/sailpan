@@ -17,7 +17,7 @@ const Report = ({ report, showLocation }) => {
         }}
       >
         <time>
-          <Moment format="HH:mm">{report.reported_at}</Moment> CT
+          <Moment format="HH:mm [CT]">{report.reported_at}</Moment>
         </time>
 
         <p>{report.category.replace(/_/g, " ").toUpperCase()}</p>
@@ -29,9 +29,7 @@ const Report = ({ report, showLocation }) => {
         <p className="brief">
           {report.conditions.map((condition) => {
             return (
-              <strong key={`${report.id}-${condition.id}`}>
-                {condition.name}.{" "}
-              </strong>
+              <b key={`${report.id}-${condition.id}`}>{condition.name}. </b>
             );
           })}
           {report.brief}
@@ -68,6 +66,7 @@ const Report = ({ report, showLocation }) => {
             position: absolute;
             top: 0;
             right: 0;
+            color: ${style.color.blue_50};
           }
 
           p {
@@ -83,7 +82,7 @@ const Report = ({ report, showLocation }) => {
             padding-top: 12px;
             border-top: 1px solid ${style.color.blue_25};
             text-align: center;
-            font: ${style.font.heading};
+            font: ${style.font.heading_1};
             text-transform: uppercase;
           }
 

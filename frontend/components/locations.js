@@ -40,7 +40,7 @@ const Locations = ({ report }) => {
         <style jsx>
           {`
             h4 {
-              font: ${style.font.location};
+              font: ${style.font.heading_2};
               margin: 0;
               display: inline-block;
               position: relative;

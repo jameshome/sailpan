@@ -120,7 +120,7 @@ const Layout = ({ children }) => {
                   opacity: 100%;
                 }
 
-                strong {
+                b {
                   font-weight: 600;
                 }
 

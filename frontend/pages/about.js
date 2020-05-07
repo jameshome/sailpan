@@ -18,10 +18,8 @@ const About = () => {
         <h1>About SailPan</h1>
       </div>
       <p>
-        <strong>
-          Passagemaking was challenging before the global pandemic.
-        </strong>{" "}
-        Now, liveaboard sailors and ocean voyagers are contending with new
+        <b>Passagemaking was challenging before the global pandemic.</b> Now,
+        liveaboard sailors and ocean voyagers are contending with new
         uncertainties, as the communities around the ports and anchorages we
         mariners rely on decide how to protect themselves from COVID-19. While
         these are real new challenges, rumors often paint an even bleaker
@@ -31,8 +29,8 @@ const About = () => {
       </p>
 
       <p>
-        <strong>That's where SailPan can help.</strong> SailPan provides sailors
-        with a daily digest of reported changes to critical ports, anchorages,
+        <b>That's where SailPan can help.</b> SailPan provides sailors with a
+        daily digest of reported changes to critical ports, anchorages,
         channels, and towns in the region. Reports come in from officials,
         marinas, and boats. Whenever possible, sources are shown to give you a
         way to follow up. All tracked locations are shown on the map. Pins are
@@ -42,9 +40,7 @@ const About = () => {
       </p>
 
       <p>
-        <strong>
-          What you won't find on SailPan is opinion or conversation.
-        </strong>{" "}
+        <b>What you won't find on SailPan is opinion or conversation.</b>{" "}
         Sailors need the scuttlebutt now more than ever, but there are already
         dozens of amazing communities out there, and we'd rather send you to
         them. For many reports, you'll find links to the communities where that
@@ -54,12 +50,12 @@ const About = () => {
 
       <h2>REGIONS</h2>
       <p>
-        <strong>SailPan divides the world into regions.</strong> Right now,
-        there's only one region on the site, covering Pacific Mexico, the Gulf
-        of California, and popular adjacent destinations. This isn't a technical
-        limitation — the site is designed to acommodate dozens of regions. We're
-        looking for more editors who are interested in managing SailPan reports
-        in their region. If that's you,{" "}
+        <b>SailPan divides the world into regions.</b> Right now, there's only
+        one region on the site, covering Pacific Mexico, the Gulf of California,
+        and popular adjacent destinations. This isn't a technical limitation —
+        the site is designed to acommodate dozens of regions. We're looking for
+        more editors who are interested in managing SailPan reports in their
+        region. If that's you,{" "}
         <a href="mailto:editors@sailpan.info" target="_blank">
           please get in touch.
         </a>
@@ -67,7 +63,7 @@ const About = () => {
 
       <h2>CONTRIBUTING</h2>
       <p>
-        <strong>SailPan thrives on your reports.</strong> Send reports to{" "}
+        <b>SailPan thrives on your reports.</b> Send reports to{" "}
         <a href="mailto:report@sailpan.info" target="_blank">
           report@sailpan.info
         </a>{" "}
@@ -94,12 +90,12 @@ const About = () => {
 
       <h2>STAFF</h2>
       <p>
-        <strong>
+        <b>
           SailPan was created by{" "}
           <a href="https://jameshome.com" target="_blank">
             James Home,
           </a>
-        </strong>{" "}
+        </b>{" "}
         aboard{" "}
         <a href="https://gettingfr.ee/rejoice/" target="_blank">
           SV Rejoice.
@@ -122,7 +118,7 @@ const About = () => {
             padding-top: 12px;
             border-top: 1px solid ${style.color.blue_25};
             text-align: center;
-            font: ${style.font.heading};
+            font: ${style.font.heading_1};
             text-transform: uppercase;
           }
 

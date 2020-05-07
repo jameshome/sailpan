@@ -28,8 +28,9 @@
       "type": "enumeration",
       "enum": [
         "open",
-        "uncertain",
+        "limited",
         "closed",
+        "uncertain",
         "unknown"
       ]
     },
