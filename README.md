@@ -66,6 +66,10 @@ env NODE_ENV=production yarn build
 pm2 restart ecosystem.config.js
 ```
 
+### Thank you
+
+- Report category icons from [Ben Alderfer's](https://thenounproject.com/balderfer101/) [Recreation and Cultural Interest](https://thenounproject.com/balderfer101/collection/recreation-and-cultural-interest/) collection on [The Noun Project](https://thenounproject.com/). Thanks Ben!
+
 ### Tools
 
 [GPS Coordinate Converter](https://www.pgc.umn.edu/apps/convert/)
