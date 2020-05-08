@@ -15,8 +15,8 @@
       "dominant": true
     },
     "locations": {
-      "via": "reports",
       "collection": "location",
+      "via": "reports",
       "dominant": true
     },
     "detail": {
@@ -42,6 +42,21 @@
         "local_knowledge",
         "unicorn_chaser"
       ]
+    },
+    "notes": {
+      "type": "text",
+      "private": true
+    },
+    "documentation": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
