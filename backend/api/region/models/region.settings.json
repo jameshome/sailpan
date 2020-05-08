@@ -25,6 +25,10 @@
     "stats": {
       "collection": "region-stat",
       "via": "region"
+    },
+    "reports": {
+      "via": "region",
+      "collection": "report"
     }
   }
 }
