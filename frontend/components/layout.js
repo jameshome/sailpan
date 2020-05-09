@@ -100,13 +100,12 @@ const Layout = ({ children }) => {
                   font-family: "Overpass";
                   font-style: normal;
                   font-weight: 600;
-                  font-size: 0.75rem;
+                  font-size: 0.875rem;
                   line-height: 1rem;
                   border-radius: 1rem;
-                  padding: 4px 8px;
+                  padding: 6px 18px;
                   color: ${style.color.cream};
                   background-color: ${style.color.orange};
-                  text-transform: uppercase;
                   text-decoration: none;
                   white-space: nowrap;
                   opacity: 100%;

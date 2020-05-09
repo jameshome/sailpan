@@ -18,10 +18,7 @@ const Reports = ({ reports }) => {
         SailPan port and passage reports are sourced with care, but policies
         change and enforcement is variable. Use this information at your own
         risk, call ahead, expect the unexpected, and above all, respect the
-        locals.{" "}
-        <Link href="/about">
-          <a>About</a>
-        </Link>
+        locals.
       </p>
       <nav>
         <a
@@ -30,6 +27,10 @@ const Reports = ({ reports }) => {
         >
           Report error
         </a>
+
+        <Link href="/about">
+          <a>How SailPan works</a>
+        </Link>
 
         <a
           href="mailto:report@sailpan.info?Subject=SAILPAN: I have a report"
@@ -76,23 +77,37 @@ const Reports = ({ reports }) => {
 
           p {
             font: ${style.font.body};
-            margin: 3px 18px;
+            margin: 3px 18px 12px;
           }
 
           nav {
             font: ${style.font.body};
-            margin: 6px 18px 12px;
+            margin: 12px 18px 12px;
             list-style: none;
             padding: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
+          }
+
+          nav .primary {
+            margin-left: auto;
+            margin-right: 0;
           }
 
           nav a {
             text-align: center;
             line-height: 1.2;
+            margin-right: 18px;
           }
+          @media screen and ${style.breakpoint.columns} {
+            p {
+              margin: 3px 60px 12px 60px;
+            }
+
+            nav {
+              margin: 12px 18px 12px 60px;
+            }
         `}
       </style>
     </>
