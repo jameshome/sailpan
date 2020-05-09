@@ -28,9 +28,7 @@ const Report = ({ report, showLocation }) => {
 
         <p className="brief">
           {report.conditions.map((condition) => {
-            return (
-              <b key={`${report.id}-${condition.id}`}>{condition.name}. </b>
-            );
+            return <b key={`${report.id}-${condition.id}`}>{condition.name}</b>;
           })}
           {report.brief}
         </p>
@@ -75,6 +73,15 @@ const Report = ({ report, showLocation }) => {
 
           .brief {
             color: ${style.color.black};
+          }
+
+          .brief b {
+            color: ${style.color.blue};
+            background-color: ${style.color.blue_08};
+            padding: 2px 6px;
+            border-radius: 12px;
+
+            margin-right: 4px;
           }
 
           h2 {

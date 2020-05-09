@@ -10,15 +10,12 @@ const Reports = ({ reports }) => {
     <>
       <h1>Welcome to SailPan</h1>
 
-      <p className="tagline">Pandemic-related port & passage reports</p>
-
-      <p className="region">for Pacific Mexico & Gulf of California</p>
-
+      <div className="tagline">Pandemic-related port & passage reports</div>
+      <div className="region">for Pacific Mexico & Gulf of California</div>
       <p>
         SailPan port and passage reports are sourced with care, but policies
-        change and enforcement is variable. Use this information at your own
-        risk, call ahead, expect the unexpected, and above all, respect the
-        locals.
+        change and enforcement is variable. Use at your own risk, call ahead,
+        expect the unexpected, and above all, respect the locals.
       </p>
       <nav>
         <a
@@ -64,6 +61,11 @@ const Reports = ({ reports }) => {
             left: -9999px;
           }
 
+
+          div {
+            font: ${style.font.body};
+          }
+
           .tagline {
             text-align: center;
             text-transform: uppercase;
@@ -102,12 +104,13 @@ const Reports = ({ reports }) => {
           }
           @media screen and ${style.breakpoint.columns} {
             p {
-              margin: 3px 60px 12px 60px;
+              margin: 3px 18px 12px 60px;
             }
 
             nav {
               margin: 12px 18px 12px 60px;
             }
+
         `}
       </style>
     </>
