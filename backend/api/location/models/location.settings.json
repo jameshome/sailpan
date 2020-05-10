@@ -21,7 +21,8 @@
         "harbor",
         "port",
         "town",
-        "city"
+        "city",
+        "state"
       ]
     },
     "status": {
@@ -41,8 +42,8 @@
       "type": "string"
     },
     "reports": {
-      "via": "locations",
-      "collection": "report"
+      "collection": "report",
+      "via": "locations"
     },
     "geometry": {
       "type": "json"

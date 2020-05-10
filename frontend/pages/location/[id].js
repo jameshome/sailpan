@@ -73,7 +73,7 @@ const Location = () => {
               let printDate;
               let date = report.reported_at.substr(0, 10);
               if (date !== previousDate) {
-                report.date = moment(date).format("MMMM DD, YYYY");
+                report.date = moment(date).format("MMMM D, YYYY");
               }
               previousDate = date;
               return (

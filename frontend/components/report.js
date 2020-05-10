@@ -76,11 +76,12 @@ const Report = ({ report, showLocation }) => {
           }
 
           .brief b {
+            display: inline-block;
             color: ${style.color.blue};
             background-color: ${style.color.blue_08};
             padding: 2px 6px;
             border-radius: 12px;
-
+            white-space: nowrap;
             margin-right: 4px;
           }
 

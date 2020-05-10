@@ -15,8 +15,8 @@
       "dominant": true
     },
     "locations": {
-      "collection": "location",
       "via": "reports",
+      "collection": "location",
       "dominant": true
     },
     "detail": {
