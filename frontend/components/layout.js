@@ -1,11 +1,12 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Header from "../components/header";
-import Map from "../components/map";
 import Meta from "../components/meta";
 import Query from "../components/query";
 import REGION_QUERY from "../queries/region";
 import style from "../utils/style";
 
+const Map = dynamic(() => import("../components/map"));
 const Layout = ({ children }) => {
   return (
     <Query query={REGION_QUERY} vars={{ id: 1 }}>
