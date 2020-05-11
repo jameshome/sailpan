@@ -1,5 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
+
 import style from "../utils/style";
 
 const Query = ({ children, query, vars }) => {
