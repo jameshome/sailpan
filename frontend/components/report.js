@@ -26,12 +26,18 @@ const Report = ({ report, showLocation }) => {
           <Locations report={report} key={`locations__${report.id}`} />
         )}
 
-        <p className="brief">
-          {report.conditions.map((condition) => {
-            return <b key={`${report.id}-${condition.id}`}>{condition.name}</b>;
-          })}
-          {report.brief}
-        </p>
+        {report.conditions && (
+          <p className="conditions">
+            {report.conditions.map((condition) => {
+              return (
+                <span key={`${report.id}-${condition.id}`}>
+                  {condition.name}
+                </span>
+              );
+            })}
+          </p>
+        )}
+        <p className="brief">{report.brief}</p>
 
         {report.reporters.map((reporter) => {
           if (reporter.url) {
@@ -68,14 +74,14 @@ const Report = ({ report, showLocation }) => {
           }
 
           p {
-            margin: 2px 0;
+            margin: 3px 0;
           }
 
           .brief {
             color: ${style.color.black};
           }
 
-          .brief b {
+          .conditions span {
             display: inline-block;
             color: ${style.color.blue};
             background-color: ${style.color.blue_08};
