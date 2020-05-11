@@ -19,13 +19,10 @@ const Report = ({ report, showLocation }) => {
         <time>
           <Moment format="HH:mm [CT]">{report.reported_at}</Moment>
         </time>
-
         <p>{report.category.replace(/_/g, " ").toUpperCase()}</p>
-
         {showLocation && (
           <Locations report={report} key={`locations__${report.id}`} />
         )}
-
         {report.conditions && (
           <p className="conditions">
             {report.conditions.map((condition) => {
@@ -37,23 +34,45 @@ const Report = ({ report, showLocation }) => {
             })}
           </p>
         )}
+
         <p className="brief">{report.brief}</p>
 
-        {report.reporters.map((reporter) => {
-          if (reporter.url) {
-            return (
-              <em key={`${reporter.id}-${reporter.id}`}>
-                <a href={`${reporter.url}`} target="_blank">
-                  {reporter.name}
-                </a>
-              </em>
-            );
-          } else {
-            return (
-              <em key={`${report.id}-${reporter.id}`}> {reporter.name}</em>
-            );
-          }
-        })}
+        {report.attachments && (
+          <p className="attachments">
+            {report.attachments.map((attachment) => {
+              return (
+                <span key={`attachment-${attachment.id}`}>
+                  <a href={`${attachment.url}`} target="_blank">
+                    <img src="/img/icon-link.png" width="18" height="18" />
+                    {attachment.name}
+                  </a>
+                </span>
+              );
+            })}
+          </p>
+        )}
+
+        {report.reporters && (
+          <p className="reporters">
+            {report.reporters.map((reporter) => {
+              if (reporter.url) {
+                return (
+                  <span key={`reporter-${reporter.id}-${reporter.id}`}>
+                    <a href={`${reporter.url}`} target="_blank">
+                      {reporter.name}
+                    </a>
+                  </span>
+                );
+              } else {
+                return (
+                  <span key={`reporter-${report.id}-${reporter.id}`}>
+                    {reporter.name}
+                  </span>
+                );
+              }
+            })}
+          </p>
+        )}
       </article>
       <style jsx>
         {`
@@ -108,20 +127,29 @@ const Report = ({ report, showLocation }) => {
             margin: 0;
           }
 
-          em {
+          .attachments {
+            margin-top: -2px;
+          }
+
+          .attachments span {
+            margin-right: 12px;
+          }
+
+          .reporters span {
+            font: ${style.font.reporter};
             color: ${style.color.blue};
             margin: 4px 0;
           }
 
-          em::after {
+          .reporters span::after {
             content: ", ";
           }
 
-          em:last-child::after {
+          .reporters span:last-child::after {
             content: " ";
           }
 
-          em a {
+          .reporters span a {
             color: ${style.color.blue};
           }
         `}

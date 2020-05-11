@@ -34,6 +34,7 @@ const Style = {
     heading_2: "400 1.1rem/1.4 Overpass, sans-serif",
     body: "400 0.875rem/1.4 Overpass, sans-serif",
     label: "400 0.875rem/1 Overpass, sans-serif",
+    reporter: "400 italic 0.875rem/1 Overpass, sans-serif",
   },
   breakpoint: {
     columns: "(min-width: 850px)",

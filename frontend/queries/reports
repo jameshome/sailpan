@@ -20,6 +20,12 @@ query Reports {
       latitude
       longitude
     }
+    attachments {
+      id
+      name
+      url
+      type
+    }
     reporters {
       id
       name

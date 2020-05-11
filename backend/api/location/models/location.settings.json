@@ -42,8 +42,8 @@
       "type": "string"
     },
     "reports": {
-      "collection": "report",
-      "via": "locations"
+      "via": "locations",
+      "collection": "report"
     },
     "geometry": {
       "type": "json"

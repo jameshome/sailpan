@@ -15,8 +15,8 @@
       "dominant": true
     },
     "locations": {
-      "via": "reports",
       "collection": "location",
+      "via": "reports",
       "dominant": true
     },
     "detail": {
@@ -61,6 +61,9 @@
     "region": {
       "model": "region",
       "via": "reports"
+    },
+    "attachments": {
+      "collection": "attachment"
     }
   }
 }

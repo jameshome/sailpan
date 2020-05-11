@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attachments",
+  "info": {
+    "name": "Attachment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "file",
+        "website"
+      ]
+    }
+  }
+}
