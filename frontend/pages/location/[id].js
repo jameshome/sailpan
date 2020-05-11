@@ -111,7 +111,7 @@ const Location = () => {
 
                 .status strong {
                   text-transform: capitalize;
-                  font: ${style.font.heading_2};
+                  font: ${style.font.heading_1};
                   padding-right: 6px;
                 }
 
