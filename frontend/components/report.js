@@ -81,6 +81,10 @@ const Report = ({ report, showLocation }) => {
             color: ${style.color.black};
           }
 
+          .conditions {
+            margin-left: -6px;
+          }
+
           .conditions span {
             display: inline-block;
             color: ${style.color.blue};

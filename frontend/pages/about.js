@@ -82,7 +82,7 @@ const About = () => {
         Below each report, you'll find a list of specific sources which link to
         more information or to the communities where the report is being
         discussed. You won't find opinion or conversation on SailPan, and we
-        encourage you to follow these links to join in the discussion.
+        encourage you to follow these links to join the discussion.
       </p>
       <h2>LOCATIONS</h2>
       <p>
@@ -237,11 +237,11 @@ const About = () => {
       <p className="withindent">
         <b>
           <a href="https://brucebalan.com/migrations/" target="_blank">
-            Bruce & Alene
+            Bruce Balan & Alene D. Rice
           </a>
         </b>
         <br />
-        Bruce & Alene have voyaged aboard SV Migration for 13 years, and have
+        Bruce and Alene have voyaged aboard SV Migration for 13 years, and have
         made a{" "}
         <a href="https://brucebalan.com/migrations/for-sailors" target="_blank">
           wealth of resources
