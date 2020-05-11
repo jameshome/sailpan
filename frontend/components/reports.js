@@ -61,7 +61,6 @@ const Reports = ({ reports }) => {
             left: -9999px;
           }
 
-
           div {
             font: ${style.font.body};
           }
@@ -102,15 +101,6 @@ const Reports = ({ reports }) => {
             line-height: 1.2;
             margin-right: 18px;
           }
-          @media screen and ${style.breakpoint.columns} {
-            p {
-              margin: 3px 18px 12px 60px;
-            }
-
-            nav {
-              margin: 12px 18px 12px 60px;
-            }
-
         `}
       </style>
     </>

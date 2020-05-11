@@ -173,6 +173,10 @@ const Layout = ({ children }) => {
                   overflow-y: auto;
                 }
 
+                .reports {
+                  max-width: 550px;
+                }
+
                 .reports div {
                   margin: 36px 0 72px;
                 }

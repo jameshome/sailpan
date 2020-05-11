@@ -24,7 +24,7 @@ const Location = () => {
             case "closed":
               return "Major restrictions or closures reported";
             case "uncertain":
-              return "Conflicting information reported";
+              return "Conflicting or confusing information reported";
             default:
               return "No information reported";
           }
@@ -35,12 +35,7 @@ const Location = () => {
             ? "1 report"
             : location.reports.length + " reports";
         pageDescription =
-          location.name +
-          " is " +
-          location.status +
-          " (" +
-          pageDescription +
-          ")";
+          "Status: " + location.status + " (" + pageDescription + ")";
 
         let pageImage = "social-" + location.status + ".png";
 
