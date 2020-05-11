@@ -17,13 +17,13 @@ const About = () => {
         <h1>How SailPan Works</h1>
       </div>
       <p>
-        <b>Passagemaking was challenging before the global pandemic.</b> Now, we
+        <b>Passagemaking was challenging before the global pandemic.</b> Now we
         sailors are contending with new uncertainties as the ports and
-        anchorages we rely on decide how to best protect their communities from
-        COVID-19. The facts we need to plan our passages are often buried
-        several posts deep in comment threads on social networks, relayed
-        quickly on a radio net, or mentioned in passing on the docks, making it
-        hard to separate rumor from reality.
+        anchorages we rely on make hard decisions about how to best protect
+        their communities from COVID-19. The facts we need to plan our passages
+        are often buried several posts deep in comment threads on social
+        networks, relayed quickly on a radio net, or mentioned in passing on the
+        docks, making it hard to separate rumor from reality.
       </p>
       <p>
         <b>
@@ -65,7 +65,7 @@ const About = () => {
         OFFICIAL NOTICE
         <br />
         Usually issued by a government agency, Official Notices often report
-        major changes to multiple locations in the region
+        major changes to multiple locations in the region.
       </p>
       <p
         className="withicon"
@@ -82,13 +82,13 @@ const About = () => {
         Below each report, you'll find a list of specific sources which link to
         more information or to the communities where the report is being
         discussed. You won't find opinion or conversation on SailPan, and we
-        encourage you to follow these links to join in.
+        encourage you to follow these links to join in the discussion.
       </p>
       <h2>LOCATIONS</h2>
       <p>
-        Reports cover one or more locations. Locations can be ports, anchorages,
-        marinas, states, cities and towns. The pin for each location is colored
-        to show our understanding of its current status:
+        Reports cover one or more locations. A location might be a port,
+        anchorage, marina, state, city or town. The pin for each location is
+        colored to show our understanding of its current status:
       </p>
       <p
         className="withicon"
@@ -138,7 +138,7 @@ const About = () => {
           The extraordinary people who share their understanding with us every
           day
         </b>
-        , usually as volunteers, are the very fabric of the sailing community.
+        , usually as volunteers, are the fabric of the sailing community.
         SailPan couldn't exist without their work. In the Pacific Mexico & Gulf
         of California region, we'd like to specifically thank:
       </p>
