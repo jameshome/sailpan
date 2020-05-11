@@ -29,12 +29,22 @@ const Location = () => {
               return "No information reported";
           }
         };
+
+        let pageDescription =
+          location.reports.length === 1
+            ? "1 report"
+            : location.reports.length + " reports";
+        pageDescription = pageDescription + " for " + location.name;
+
+        let pageImage = "social-" + location.status + ".png";
+
         return (
           <>
             <Meta
               title={location.name}
               url={"https://sailpan.info/location/" + location.id}
-              description="Pandemic-related port & passage reports"
+              description={pageDescription}
+              image={pageImage}
             />
 
             <div className="details">
