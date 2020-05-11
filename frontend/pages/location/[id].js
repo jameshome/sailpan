@@ -34,7 +34,13 @@ const Location = () => {
           location.reports.length === 1
             ? "1 report"
             : location.reports.length + " reports";
-        pageDescription = pageDescription + " for " + location.name;
+        pageDescription =
+          location.name +
+          " is " +
+          location.status +
+          " (" +
+          pageDescription +
+          ")";
 
         let pageImage = "social-" + location.status + ".png";
 
