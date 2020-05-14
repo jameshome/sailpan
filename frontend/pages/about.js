@@ -79,9 +79,11 @@ const About = () => {
         status, availability, price changes, and openings and closures.
       </p>
       <p>
-        Below each report, you'll find a list of specific sources which link to
-        more information or to the communities where the report is being
-        discussed. You won't find opinion or conversation on SailPan, and we
+        The <b>date</b> shown on each report represents our best understanding
+        of when the reporter had the experience being reported. Below each
+        report, you'll find a list of specific <b>sources</b> which link to more
+        information or to the communities where the report is being discussed.
+        You won't find <b>opinion or conversation</b> on SailPan, and we
         encourage you to follow these links to join the discussion.
       </p>
       <h2>LOCATIONS</h2>
