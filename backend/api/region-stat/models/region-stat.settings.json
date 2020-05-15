@@ -22,8 +22,11 @@
       "type": "string"
     },
     "region": {
-      "via": "stats",
-      "model": "region"
+      "model": "region",
+      "via": "stats"
+    },
+    "code": {
+      "type": "string"
     }
   }
 }

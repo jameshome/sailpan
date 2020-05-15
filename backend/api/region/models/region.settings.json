@@ -23,8 +23,8 @@
       "collection": "location"
     },
     "stats": {
-      "collection": "region-stat",
-      "via": "region"
+      "via": "region",
+      "collection": "region-stat"
     },
     "reports": {
       "via": "region",

@@ -6,6 +6,7 @@ module.exports = {
       script: "yarn",
       args: "start",
       watch: true,
+      watch_delay: 1000,
       interpreter: "/bin/bash",
       env: {
         NODE_ENV: "production",
