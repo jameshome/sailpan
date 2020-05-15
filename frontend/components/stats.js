@@ -44,7 +44,7 @@ const Stats = ({ region }) => {
   });
   return (
     <div>
-      {regionStats.map((stat, i) => {
+      {regionStats.slice(0, 3).map((stat, i) => {
         return <Stat stat={stat} key={`stat__${i}`} />;
       })}
 
