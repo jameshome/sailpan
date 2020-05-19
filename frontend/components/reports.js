@@ -15,7 +15,7 @@ const Reports = ({ reports }) => {
       <p>
         SailPan port and passage reports are sourced with care, but policies
         change and enforcement is variable. Use at your own risk, call ahead,
-        expect the unexpected, and above all, respect the locals.
+        expect the unexpected, and above all, <b>respect the locals.</b>
       </p>
       <nav>
         <a
