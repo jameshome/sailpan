@@ -1,7 +1,7 @@
 {
   "name": "sailpan-backend",
   "private": true,
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "sailpan backend",
   "scripts": {
     "dev": "strapi develop",
@@ -12,21 +12,19 @@
   "devDependencies": {},
   "dependencies": {
     "bookshelf": "^1.1.1",
-    "dotenv": "^8.2.0",
-    "find-config": "^1.0.0",
     "knex": "<0.20.0",
     "mysql": "^2.18.1",
     "sqlite3": "latest",
-    "strapi": "3.0.0-beta.20",
-    "strapi-admin": "3.0.0-beta.20",
-    "strapi-connector-bookshelf": "3.0.0-beta.20",
-    "strapi-plugin-content-manager": "3.0.0-beta.20",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.20",
-    "strapi-plugin-email": "3.0.0-beta.20",
-    "strapi-plugin-graphql": "3.0.0-beta.20",
-    "strapi-plugin-upload": "3.0.0-beta.20",
-    "strapi-plugin-users-permissions": "3.0.0-beta.20",
-    "strapi-utils": "3.0.0-beta.20"
+    "strapi": "3.0.0",
+    "strapi-admin": "3.0.0",
+    "strapi-connector-bookshelf": "3.0.0",
+    "strapi-plugin-content-manager": "3.0.0",
+    "strapi-plugin-content-type-builder": "3.0.0",
+    "strapi-plugin-email": "3.0.0",
+    "strapi-plugin-graphql": "3.0.0",
+    "strapi-plugin-upload": "3.0.0",
+    "strapi-plugin-users-permissions": "3.0.0",
+    "strapi-utils": "3.0.0"
   },
   "author": {
     "name": "James Home"

@@ -32,12 +32,12 @@ This will install required `node_modules` and start dev instances of the fronten
 
 ### Deployment
 
-Strapi and Next.js are both run as [pm2](https://pm2.keymetrics.io/) processes, proxied through [nginx](www.nginx.com). Environment variables are persisted with [dotenv](https://github.com/motdotla/dotenv) in separately deployed `.env` files.
+Strapi and Next.js are both run as [pm2](https://pm2.keymetrics.io/) processes, proxied through [nginx](www.nginx.com).
 
-Initial deployment looks something like this:
+Production installation looks something like this:
 
 ```
-git clone git@github.com:jameshome/sailpan.git
+git clone git@github.com:jameshome/sailpan.git dist
 cd dist/backend
 yarn
 scp example.com:~/src/sailpan/frontend/.env .
@@ -55,13 +55,12 @@ pm2 save
 Ultimately deployment will be automated, but until then:
 
 ```
-git clone git@github.com:jameshome/sailpan.git
+cd dist
+git pull
 cd dist/backend
-yarn
 env NODE_ENV=production yarn build
 pm2 restart ecosystem.config.js
-cd dist/frontend
-yarn
+cd ../frontend
 env NODE_ENV=production yarn build
 pm2 restart ecosystem.config.js
 ```
