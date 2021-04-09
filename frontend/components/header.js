@@ -19,25 +19,27 @@ const Header = ({ region }) => {
         onClick={toggleNote}
       >
         <div className="note-details-content">
-          <h2>THANK YOU CRUISERS!</h2>
+          <h2>FAIR WINDS!</h2>
 
           <p>
-            About a year ago it became clear that the pandemic was going to
-            interrupt our cruising plans. I made SailPan to help cruisers figure
-            out our best bets for weathering this difficult time in comfort and
-            safety. Thanks to Boat Reports from dozens of fellow cruisers,
-            Pacific Mexico and Sea of Cortez sailors were able to move around
-            safely with minimal impact on the locals.
+            About a year ago, it became clear that the pandemic was going to
+            interrupt our cruising plans. I made SailPan to help us cruisers
+            figure out our best bets for weathering this difficult time. SailPan
+            reports from dozens of fellow cruisers helped Pacific Mexico and Sea
+            of Cortez sailors move around relatively safely with minimal impact
+            on the locals. Thanks to all who made reports around the region!
           </p>
 
           <p>
             While the pandemic is still with us, we've all learned to wear masks
-            and follow protocols. Since most places in the region are operating
-            pretty normally, <b>SailPan will stop taking new updates.</b>
+            and follow protocols. Since most places in the region are now
+            operating pretty normally,{" "}
+            <b>SailPan will stop posting new reports on March 25, 2021.</b>
           </p>
           <p>
-            As always, it's a good idea to contact marinas before arriving, and
-            to talk to fellow cruisers about recent experiences in anchorages.
+            As always, it's a good idea to contact marinas before arriving, talk
+            to other cruisers about recent experiences in anchorages you plan to
+            visit, and above all, respect the locals.
           </p>
 
           <span className="button">GOT IT</span>
