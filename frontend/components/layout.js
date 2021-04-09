@@ -97,7 +97,8 @@ const Layout = ({ children }) => {
                   border-bottom: 1px solid ${style.color.orange_25};
                 }
 
-                a.primary {
+                a.primary,
+                .button {
                   font-family: "Overpass";
                   font-style: normal;
                   font-weight: 600;

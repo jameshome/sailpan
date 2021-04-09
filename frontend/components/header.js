@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Stats from "../components/stats";
 import style from "../utils/style";
 
 const Header = ({ region }) => {
+  const [showNote, setShowNote] = useState(false);
+  function toggleNote() {
+    setShowNote(!showNote);
+  }
+
   return (
     <div>
+      <div
+        className="note-details"
+        style={{
+          display: showNote ? "flex" : "none",
+        }}
+        onClick={toggleNote}
+      >
+        <div className="note-details-content">
+          <h2>THANK YOU CRUISERS!</h2>
+
+          <p>
+            About a year ago it became clear that the pandemic was going to
+            interrupt our cruising plans. I made SailPan to help cruisers figure
+            out our best bets for weathering this difficult time in comfort and
+            safety. Thanks to Boat Reports from dozens of fellow cruisers,
+            Pacific Mexico and Sea of Cortez sailors were able to move around
+            safely with minimal impact on the locals.
+          </p>
+
+          <p>
+            While the pandemic is still with us, we've all learned to wear masks
+            and follow protocols. Since most places in the region are operating
+            pretty normally, <b>SailPan will stop taking new updates.</b>
+          </p>
+          <p>
+            As always, it's a good idea to contact marinas before arriving, and
+            to talk to fellow cruisers about recent experiences in anchorages.
+          </p>
+
+          <span className="button">GOT IT</span>
+        </div>
+      </div>
+      <div className="note" onClick={toggleNote}>
+        <span className="highlight">NOTICE:</span> No new updates will be made
+        to SailPan <span className="detailLink">LEARN MORE</span>
+      </div>
       <Link href="/">
         <a>
           <span className="nowrap"> Sailing Through </span>{" "}
@@ -15,6 +56,52 @@ const Header = ({ region }) => {
       <Stats region={region} />
       <style jsx>
         {`
+
+          .note-details {
+            position: fixed;
+            display: none;
+            z-index: 20;
+            background-color: ${style.color.blue_70};
+            height: 100%;
+            width: 100%;
+          }
+
+          .note-details-content {
+            background-color: ${style.color.cream};
+            width: 95vw;
+            max-width: 550px;
+            border-radius: 6px;
+            margin: auto;
+            
+          }
+
+          .note-details-content h2 {
+            font: ${style.font.heading_1};
+            margin: 12px;
+          }
+
+          .note-details-content p {
+            text-align: left;
+            margin: 12px;
+
+          }
+
+          .note {
+            background-color: ${style.color.orange};
+            color: ${style.color.cream};
+            padding: 6px;
+            box-shadow: none;
+          }
+
+          .note .highlight {
+            font: ${style.font.heading_1}
+          }
+
+          .note .detailLink {
+            padding-left: 4px;
+            font: ${style.font.label}
+          }
+
           div {
             width: 100%;
             position: relative;
